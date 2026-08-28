@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://yn1nrilqo83i" path="res://Background/War2.png" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://opb7g3t36ue2" path="res://player.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://cnqq8a6i235ri" path="res://Scenes/lantern.tscn" id="3_h2yge"]
-[ext_resource type="PackedScene" path="res://collectible.tscn" id="5_7mycd"]
 [ext_resource type="PackedScene" uid="uid://bgmqn2kmbtff1" path="res://enemy.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://c1yenu1jj41mo" path="res://Scenes/hpbar.tscn" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://d2h3mefcc4pts" path="res://portal.tscn" id="6_272bh"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_i5d6c"]
 a = Vector2(-320, 415)
@@ -61,10 +61,10 @@ b = Vector2(63, 17)
 b = Vector2(139, -3)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qjud"]
-size = Vector2(20, 653)
+size = Vector2(31, 653)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8mmti"]
-size = Vector2(3462, 20)
+size = Vector2(3462, 77.5)
 
 [node name="Node2D" type="Node2D" unique_id=2080322140]
 
@@ -278,11 +278,19 @@ position = Vector2(2950, 546)
 shape = SubResource("SegmentShape2D_djjbk")
 
 [node name="CollisionShape2D48" type="CollisionShape2D" parent="StaticBody2D" unique_id=316033535]
-position = Vector2(11, 323.5)
+position = Vector2(16.5, 324)
+shape = SubResource("RectangleShape2D_4qjud")
+
+[node name="CollisionShape2D49" type="CollisionShape2D" parent="StaticBody2D" unique_id=1535931713]
+position = Vector2(3449, 322)
 shape = SubResource("RectangleShape2D_4qjud")
 
 [node name="CollisionShape2D40" type="CollisionShape2D" parent="StaticBody2D" unique_id=1145736978]
-position = Vector2(1732, 6)
+position = Vector2(1732, 18.5)
+shape = SubResource("RectangleShape2D_8mmti")
+
+[node name="CollisionShape2D50" type="CollisionShape2D" parent="StaticBody2D" unique_id=628484601]
+position = Vector2(1741, 611.75)
 shape = SubResource("RectangleShape2D_8mmti")
 
 [node name="player" parent="." unique_id=2029710320 instance=ExtResource("2_0xm2m")]
@@ -299,7 +307,7 @@ position_smoothing_enabled = true
 position = Vector2(-64.999985, 169.99998)
 scale = Vector2(0.6, 0.6)
 
-[node name="Collectible" parent="." unique_id=898794062 instance=ExtResource("5_7mycd")]
+[node name="Collectible" parent="." unique_id=898794062]
 position = Vector2(731, 164)
 scale = Vector2(1.5, 1.5)
 
@@ -308,3 +316,5 @@ position = Vector2(689, 488.00003)
 scale = Vector2(3, 3)
 
 [node name="HPbar" parent="." unique_id=189037822 instance=ExtResource("6_7mycd")]
+
+[node name="Area2D" parent="." unique_id=1606918024 instance=ExtResource("6_272bh")]
