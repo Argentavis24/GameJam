@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cgqwrjv7a21ji" path="res://skulls.tscn" id="4_0s5r2"]
 [ext_resource type="PackedScene" uid="uid://b3t6nydew3d80" path="res://Scenes/MovingPlatform.tscn" id="4_1y8me"]
 [ext_resource type="PackedScene" uid="uid://opb7g3t36ue2" path="res://player.tscn" id="4_n7ypv"]
+[ext_resource type="FontFile" uid="uid://c0rvo5ja7c4an" path="res://Font/Black Blood.otf" id="5_0s5r2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8mmti"]
 size = Vector2(20, 723)
@@ -171,6 +172,10 @@ texture = ExtResource("2_nmjpi")
 [sub_resource type="TileSet" id="TileSet_8mmti"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_xdadj")
+
+[sub_resource type="LabelSettings" id="LabelSettings_8mmti"]
+font = ExtResource("5_0s5r2")
+font_size = 100
 
 [node name="Level2" type="Node2D" unique_id=88527624]
 
@@ -401,29 +406,85 @@ scale = Vector2(3.99, 3.99)
 position = Vector2(358, 232)
 scale = Vector2(0.2, 0.2)
 
-[node name="skulls2" parent="." unique_id=310358284 instance=ExtResource("4_0s5r2")]
-position = Vector2(563, 346)
+[node name="Label" type="Label" parent="skulls" unique_id=218884119]
+offset_left = -60.000015
+offset_top = -295.0
+offset_right = 109.999985
+offset_bottom = -159.0
+text = "Pride"
+label_settings = SubResource("LabelSettings_8mmti")
+
+[node name="skulls2" parent="." unique_id=412800315 instance=ExtResource("4_0s5r2")]
+position = Vector2(558, 348)
 scale = Vector2(0.2, 0.2)
 
-[node name="skulls3" parent="." unique_id=1650591082 instance=ExtResource("4_0s5r2")]
-position = Vector2(897, 179)
+[node name="Label" type="Label" parent="skulls2" unique_id=87216457]
+offset_left = -55.000015
+offset_top = -290.0
+offset_right = 114.999985
+offset_bottom = -154.0
+text = "Envy"
+label_settings = SubResource("LabelSettings_8mmti")
+
+[node name="skulls3" parent="." unique_id=1860174964 instance=ExtResource("4_0s5r2")]
+position = Vector2(894, 183.00002)
 scale = Vector2(0.2, 0.2)
 
-[node name="skulls7" parent="." unique_id=1972997657 instance=ExtResource("4_0s5r2")]
-position = Vector2(1092, 238)
+[node name="Label" type="Label" parent="skulls3" unique_id=503568706]
+offset_left = -90.000015
+offset_top = -280.0001
+offset_right = 103.999985
+offset_bottom = -144.00009
+text = "Wrath"
+label_settings = SubResource("LabelSettings_8mmti")
+
+[node name="skulls4" parent="." unique_id=2007295067 instance=ExtResource("4_0s5r2")]
+position = Vector2(1872, 457)
 scale = Vector2(0.2, 0.2)
 
-[node name="skulls5" parent="." unique_id=615367987 instance=ExtResource("4_0s5r2")]
-position = Vector2(2073, 341)
+[node name="Label" type="Label" parent="skulls4" unique_id=1574450800]
+offset_left = -80.000015
+offset_top = -274.99994
+offset_right = 113.999985
+offset_bottom = -138.99994
+text = "Sloth"
+label_settings = SubResource("LabelSettings_8mmti")
+
+[node name="skulls5" parent="." unique_id=1942535376 instance=ExtResource("4_0s5r2")]
+position = Vector2(2074, 343)
 scale = Vector2(0.2, 0.2)
 
-[node name="skulls6" parent="." unique_id=233685068 instance=ExtResource("4_0s5r2")]
-position = Vector2(1873, 458)
+[node name="Label" type="Label" parent="skulls5" unique_id=679664572]
+offset_left = -80.000015
+offset_top = -274.99994
+offset_right = 113.999985
+offset_bottom = -138.99994
+text = "Greed"
+label_settings = SubResource("LabelSettings_8mmti")
+
+[node name="skulls7" parent="." unique_id=805153284 instance=ExtResource("4_0s5r2")]
+position = Vector2(1093, 238)
 scale = Vector2(0.2, 0.2)
 
-[node name="skulls4" parent="." unique_id=803451696 instance=ExtResource("4_0s5r2")]
-position = Vector2(1676, 122)
+[node name="Label" type="Label" parent="skulls7" unique_id=892658626]
+offset_left = -115.000015
+offset_top = -290.0
+offset_right = 140.99998
+offset_bottom = -154.0
+text = "Gluttony"
+label_settings = SubResource("LabelSettings_8mmti")
+
+[node name="skulls8" parent="." unique_id=21349524 instance=ExtResource("4_0s5r2")]
+position = Vector2(1680, 128)
 scale = Vector2(0.2, 0.2)
+
+[node name="Label" type="Label" parent="skulls8" unique_id=957094159]
+offset_left = -65.000015
+offset_top = -280.0
+offset_right = 190.99998
+offset_bottom = -144.0
+text = "Lust"
+label_settings = SubResource("LabelSettings_8mmti")
 
 [node name="player" parent="." unique_id=2029710320 instance=ExtResource("4_n7ypv")]
 position = Vector2(78, 556.00006)
