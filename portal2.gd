@@ -20,6 +20,8 @@ func activate_portal() -> void:
 	print("ACTIVATING PORTAL")
 	visible = true
 	monitoring = true
-
-func _on_body_entered(_body: Node2D) -> void:
+func change_scene_1():
 	get_tree().change_scene_to_file('res://UI/StoryLvl2-3.tscn')
+func _on_body_entered(_body: Node2D) -> void:
+	call_deferred("change_scene_1")
+	
