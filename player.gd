@@ -34,9 +34,13 @@ func attack() -> void:
 
 
 func _quit_game():
-		get_tree().change_scene_to_file("res://UI/Quit.tscn")
+		get_tree().change_scene_to_file('res://UI/ConfirmToQuit.tscn')
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed('ui_cancel'):
 		call_deferred("_quit_game")
+		
+		
+		
+		
 		
