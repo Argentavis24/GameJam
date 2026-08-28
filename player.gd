@@ -75,4 +75,3 @@ func _quit_game():
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed('ui_cancel'):
 		call_deferred("_quit_game")
-
