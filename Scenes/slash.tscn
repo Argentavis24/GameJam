@@ -62,7 +62,7 @@ height = 536.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1663033369]
 sprite_frames = SubResource("SpriteFrames_mw2tn")
 autoplay = "default"
-frame_progress = 0.9073497
+frame_progress = 0.48293808
 flip_h = true
 
 [node name="Area2D" type="Area2D" parent="AnimatedSprite2D" unique_id=1375801760]

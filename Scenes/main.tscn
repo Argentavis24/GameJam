@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://yn1nrilqo83i" path="res://Background/War2.png" id="1_jjgbg"]
 
-[node name="Node2D" type="Node2D" unique_id=2080322140]
+[node name="Game" type="Node2D" unique_id=2080322140]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1472279906]
 offset_right = 1154.0

@@ -182,4 +182,4 @@ position = Vector2(71, 91.25)
 scale = Vector2(5.4375, 4.5784316)
 sprite_frames = SubResource("SpriteFrames_mw2tn")
 animation = &"lantern die"
-frame_progress = 0.04414847
+frame_progress = 0.4598337
