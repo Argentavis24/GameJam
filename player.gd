@@ -8,14 +8,16 @@ const JUMP_VELOCITY = -600.0
 @export var attack_cooldown: float = 0.5
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-var slash: Area2D = null
 
+var slash: Area2D = null
 var is_hurt: bool = false
 var can_attack: bool = true
+var is_slashing: bool = false
+var was_f_pressed: bool = false
 
 func _ready() -> void:
 	add_to_group("player")
-	
+
 	slash = find_child("slash", true, false) as Area2D
 	if not slash:
 		slash = find_child("Slash", true, false) as Area2D
@@ -29,19 +31,31 @@ func sync_hp_bar() -> void:
 		hp_bar.update_health(health, max_health)
 
 func _physics_process(delta: float) -> void:
+	# Stop movement processing while slashing to keep the attack stationary
+	if is_slashing:
+		velocity.x = 0.0
+		move_and_slide()
+		return
+
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	var direction := Input.get_axis("ui_left", "ui_right")
+	# Strictly A and D keys for horizontal movement
+	var direction := 0.0
+	if Input.is_key_pressed(KEY_D):
+		direction += 1.0
+	if Input.is_key_pressed(KEY_A):
+		direction -= 1.0
+
 	if direction != 0:
 		velocity.x = direction * SPEED
-		
+
 		if sprite:
 			sprite.flip_h = (direction < 0)
-			
+
 		if slash:
 			slash.position.x = -abs(slash.position.x) if direction < 0 else abs(slash.position.x)
 			slash.scale.x = -abs(slash.scale.x) if direction < 0 else abs(slash.scale.x)
@@ -56,7 +70,14 @@ func _physics_process(delta: float) -> void:
 		else:
 			sprite.play("idle")
 
-	if Input.is_action_just_pressed("attack") and can_attack and not is_hurt:
+	# Edge-detect the F key manually so holding it doesn't spam attacks
+	var f_pressed_now: bool = Input.is_physical_key_pressed(KEY_F)
+	var f_just_pressed: bool = f_pressed_now and not was_f_pressed
+	was_f_pressed = f_pressed_now
+
+	# Check for attack inputs without adding movement
+	var attack_pressed: bool = Input.is_action_just_pressed("attack") or Input.is_action_just_pressed("slash") or f_just_pressed
+	if attack_pressed and can_attack and not is_hurt:
 		attack()
 
 func _process(_delta: float) -> void:
@@ -65,27 +86,29 @@ func _process(_delta: float) -> void:
 
 func attack() -> void:
 	can_attack = false
-	
+	is_slashing = true
+
+	# Lock horizontal movement during the attack
+	velocity.x = 0.0
+
 	if slash and slash.has_method("play_slash"):
 		slash.play_slash()
-	
+
+	# Cooldown timer before player can attack again
 	await get_tree().create_timer(attack_cooldown).timeout
+	is_slashing = false
 	can_attack = true
-	
-	
-	
-	
 
 func take_damage(amount: int) -> void:
 	if health <= 0:
 		return
-		
+
 	health -= amount
 	health = max(0, health)
 	print("Player health: ", health)
-	
+
 	sync_hp_bar()
-	
+
 	if health <= 0:
 		die()
 	else:
@@ -102,7 +125,7 @@ func die() -> void:
 	is_hurt = true
 	velocity = Vector2.ZERO
 	set_physics_process(false)
-	
+
 	var col = get_node_or_null("CollisionShape2D")
 	if col:
 		col.set_deferred("disabled", true)
