@@ -6,7 +6,7 @@ enum State { PASSIVE, WIELDING, CHASE, ATTACK, DEAD }
 @export var speed: float = 100.0
 @export var detection_range: float = 250.0
 @export var attack_range: float = 80.0
-@export var damage: int = 15
+@export var damage: int = 20
 @export var attack_cooldown: float = 1.0
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D

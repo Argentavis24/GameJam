@@ -5,7 +5,7 @@ const JUMP_VELOCITY = -400.0
 
 @export var max_health: int = 100
 @export var health: int = 100
-@export var attack_cooldown: float = 1.0
+@export var attack_cooldown: float = 0.5
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 var slash: Area2D = null
@@ -20,7 +20,6 @@ func _ready() -> void:
 	if not slash:
 		slash = find_child("Slash", true, false) as Area2D
 
-	# Wait 1 frame so CanvasLayer nodes in the main scene finish loading
 	await get_tree().process_frame
 	sync_hp_bar()
 
@@ -63,6 +62,7 @@ func _physics_process(delta: float) -> void:
 func attack() -> void:
 	can_attack = false
 	
+	# Only triggers visual slash and area collision checks
 	if slash and slash.has_method("play_slash"):
 		slash.play_slash()
 	
@@ -106,7 +106,4 @@ func die() -> void:
 	else:
 		await get_tree().create_timer(1.0).timeout
 
-	queue_free()
-	
-	get_tree().change_scene_to_file('res://UI/GameOver.tscn')
-	
+	get_tree().reload_current_scene()

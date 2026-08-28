@@ -1,7 +1,7 @@
 extends Area2D
 
 @export var damage: int = 10
-@export var active_duration: float = 0.3
+@export var active_duration: float = 0.2
 
 @onready var sprite = get_node_or_null("AnimatedSprite2D")
 
@@ -18,7 +18,7 @@ func play_slash() -> void:
 		sprite.frame = 0
 		sprite.play()
 
-	# Wait 1 physics frame to fetch overlapping hitboxes reliably
+	# Wait for physics step to detect overlaps
 	await get_tree().physics_frame
 	check_damage()
 
