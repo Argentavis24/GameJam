@@ -213,6 +213,24 @@ texture = ExtResource("1_jg0dc")
 expand_mode = 1
 flip_v = true
 
+[node name="TextureRect7" type="TextureRect" parent="." unique_id=134230795]
+offset_left = -1205.0
+offset_top = -712.0
+offset_right = -4.0
+offset_bottom = 8.0
+texture = ExtResource("1_jg0dc")
+expand_mode = 1
+flip_v = true
+
+[node name="TextureRect8" type="TextureRect" parent="." unique_id=2071211427]
+offset_left = 2378.0
+offset_top = -716.0
+offset_right = 3579.0
+offset_bottom = 4.0
+texture = ExtResource("1_jg0dc")
+expand_mode = 1
+flip_v = true
+
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=47294738]
 offset_left = 1200.0
 offset_right = 2401.0
