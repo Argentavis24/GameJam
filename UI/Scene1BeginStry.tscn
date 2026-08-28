@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://d33ok3i1buw7t"]
+
+[ext_resource type="Script" uid="uid://bqwtiovrvfhel" path="res://UI/scene_1_begin_stry.gd" id="1_pbt80"]
+[ext_resource type="Texture2D" uid="uid://bsj755t8x6y3l" path="res://UI/ImagesForUI/main_menu_glimmer_of_hope.png" id="2_bhhu7"]
+[ext_resource type="Texture2D" uid="uid://nx4dyv6l2hrb" path="res://UI/ImagesForUI/parchement.png" id="3_o3263"]
+[ext_resource type="FontFile" uid="uid://c0rvo5ja7c4an" path="res://Font/Black Blood.otf" id="4_nkiy0"]
+
+[node name="Instructions" type="Control" unique_id=958154108]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pbt80")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2002980436]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.01
+anchor_bottom = 1.026
+offset_right = 0.47998047
+offset_bottom = 0.15197754
+texture = ExtResource("2_bhhu7")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect" unique_id=1583289411]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -462.24
+offset_top = -136.0
+offset_right = 512.76
+offset_bottom = 796.0
+grow_horizontal = 2
+texture = ExtResource("3_o3263")
+
+[node name="Heading" type="Label" parent="TextureRect" unique_id=1556850553]
+layout_mode = 0
+offset_left = 547.0
+offset_top = 58.0
+offset_right = 718.0
+offset_bottom = 161.0
+theme_override_colors/font_color = Color(0.00030873288, 0.0024294415, 0.15285732, 1)
+theme_override_fonts/font = ExtResource("4_nkiy0")
+theme_override_font_sizes/font_size = 75
+text = "STORY"
+
+[node name="Ins" type="Label" parent="." unique_id=1828885628]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.9710001
+offset_left = 480.0
+offset_top = 670.0
+offset_right = -439.0
+offset_bottom = 25.879944
+theme_override_fonts/font = ExtResource("4_nkiy0")
+theme_override_font_sizes/font_size = 40
+text = "Press enter Continue"
+
+[node name="Content" type="Label" parent="." unique_id=156588270]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 178.0
+offset_right = 1019.0
+offset_bottom = 672.0
+theme_override_colors/font_color = Color(0, 0.003921569, 0.15294118, 1)
+theme_override_fonts/font = ExtResource("4_nkiy0")
+theme_override_font_sizes/font_size = 50
+text = "Astra(Player): Where am I? I can't remember 
+anything.
+Mysterious Voice 1: Son....Keep going...
+this lantern shall guide you...
+Astra: Huh......???
+
+"
