@@ -56,7 +56,7 @@ func _jab_arrow() -> void:
 	)
 
 func _on_play_pressed() -> void:
-	get_tree().change_scene_to_file('res://main.tscn')
+	get_tree().change_scene_to_file('res://UI/BeginStory.tscn')
 
 
 func _on_exit_pressed() -> void:

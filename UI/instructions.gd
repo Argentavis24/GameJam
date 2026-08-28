@@ -1,7 +1,8 @@
 extends Control
 
+@onready var scroll_container: ScrollContainer = $TextureRect/ScrollContainer  # adjust to your actual path
 @onready var label: Label = $Ins
-
+const SCROLL_SPEED = 300.0
 var animation_done := false
 
 func _ready() -> void:
@@ -21,6 +22,17 @@ func start_attention_pulse() -> void:
 	float_tween.tween_property(label, "position:y", start_pos.y - 8, 0.6).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	float_tween.tween_property(label, "position:y", start_pos.y, 0.6).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
+	if Input.is_action_pressed("ui_up"):
+		scroll_container.scroll_vertical -= SCROLL_SPEED * delta
+	elif Input.is_action_pressed("ui_down"):
+		scroll_container.scroll_vertical += SCROLL_SPEED * delta
 	if Input.is_action_just_pressed("ui_cancel"):
-		get_tree().change_scene_to_file('res://UI/MainMenu.tscn')  
+		get_tree().change_scene_to_file('res://UI/MainMenu.tscn')
+
+
+
+
+
+
+	

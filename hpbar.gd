@@ -1,39 +1,34 @@
 extends CanvasLayer
 
-
 @export var heart_scene : PackedScene
 
-var max_hp = 10
-var current_hp = 3
+var max_hearts: int = 5
 
 func _ready() -> void:
-	setup_hp()
+	add_to_group("hpbar")
 
-
-func setup_hp():
-	validate_hp()
+func update_health(current_player_hp: int, max_player_hp: int) -> void:
 	clean_current_representation()
-	draw_hearts()
 	
-func heal():
-	current_hp += 1
-	setup_hp()
-	
-func hit():
-	current_hp -= 1
-	setup_hp()
-	
-func validate_hp():
-		current_hp = [current_hp, max_hp].min()
-		if current_hp <=0:
-			get_parent().die()
+	if heart_scene == null:
+		print("ERROR: heart_scene is not assigned in the Inspector!")
+		return
 
-func clean_current_representation():
-	for child in $HBoxContainer.get_children():
-		child.queue_free()
-		
-func draw_hearts():
-	for x in current_hp:
+	var container = get_node_or_null("HBoxContainer")
+	if container == null:
+		print("ERROR: HBoxContainer child missing under HPBar!")
+		return
+
+	# Calculate remaining hearts proportional to max health
+	var hp_ratio: float = float(current_player_hp) / float(max_player_hp)
+	var active_hearts: int = ceil(hp_ratio * max_hearts)
+
+	for x in range(active_hearts):
 		var heart_instance = heart_scene.instantiate()
-		$HBoxContainer.add_child(heart_instance)
-	
+		container.add_child(heart_instance)
+
+func clean_current_representation() -> void:
+	var container = get_node_or_null("HBoxContainer")
+	if container:
+		for child in container.get_children():
+			child.queue_free()
