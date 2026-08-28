@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://dms3o2jyaymki"]
+[gd_scene format=3 uid="uid://1urjaq28nq0i"]
 
-[ext_resource type="Texture2D" uid="uid://yn1nrilqo83i" path="res://War2.png" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://yn1nrilqo83i" path="res://Background/War2.png" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://k6m7ivisggfj" path="res://character.tscn" id="2_0xm2m"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_i5d6c"]
@@ -55,6 +55,7 @@ b = Vector2(63, 17)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_djjbk"]
 b = Vector2(139, -3)
+
 
 [node name="Node2D" type="Node2D" unique_id=2080322140]
 
