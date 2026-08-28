@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://tyxgliss4vdv"]
 
 [ext_resource type="Texture2D" uid="uid://bwcfl3o145vek" path="res://Monster/HostileAttack.png" id="1_682xl"]
+[ext_resource type="Script" uid="uid://bvklun3dvdjt8" path="res://Scripts/monster.gd" id="1_auidl"]
 [ext_resource type="Texture2D" uid="uid://bsxg8ru4wh6eh" path="res://Monster/HostileIdle.png" id="2_m3gvp"]
 [ext_resource type="Texture2D" uid="uid://cku611n41vbx" path="res://Monster/HostileRunning.png" id="3_om6p4"]
 [ext_resource type="Texture2D" uid="uid://ckdpddiybj37q" path="res://Monster/PassiveIdle.png" id="4_ilra5"]
@@ -269,7 +270,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_31jjl")
 }],
 "loop": 1,
-"name": &"H_attack",
+"name": &"hostile_attack",
 "speed": 5.0
 }, {
 "frames": [{
@@ -289,7 +290,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_cvngj")
 }],
 "loop": 1,
-"name": &"H_idle",
+"name": &"hostile_idle",
 "speed": 5.0
 }, {
 "frames": [{
@@ -318,7 +319,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_mb7w3")
 }],
 "loop": 1,
-"name": &"H_run",
+"name": &"hostile_run",
 "speed": 5.0
 }, {
 "frames": [{
@@ -338,7 +339,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_3hi0n")
 }],
 "loop": 1,
-"name": &"P_idle",
+"name": &"passive_idle",
 "speed": 5.0
 }, {
 "frames": [{
@@ -367,7 +368,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_acs5o")
 }],
 "loop": 1,
-"name": &"P_run",
+"name": &"passive_run",
 "speed": 5.0
 }, {
 "frames": [{
@@ -402,7 +403,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_bkoaj")
 }],
 "loop": 1,
-"name": &"holster",
+"name": &"weapon_holster",
 "speed": 5.0
 }, {
 "frames": [{
@@ -437,7 +438,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_dhurs")
 }],
 "loop": 1,
-"name": &"wield",
+"name": &"weapon_wield",
 "speed": 5.0
 }]
 
@@ -445,6 +446,7 @@ animations = [{
 scale = Vector2(0.5, 0.5)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1426258743]
+script = ExtResource("1_auidl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=967792711]
 shape = SubResource("CapsuleShape2D_kry3j")
@@ -452,4 +454,4 @@ shape = SubResource("CapsuleShape2D_kry3j")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1346288846]
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_8jeix")
-animation = &"holster"
+animation = &"hostile_run"

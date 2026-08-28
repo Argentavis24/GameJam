@@ -29,4 +29,4 @@ expand_mode = 1
 
 [node name="Monster" parent="." unique_id=1882059383 instance=ExtResource("2_bo1nx")]
 visibility_layer = 8
-position = Vector2(368, 518)
+position = Vector2(426, 511)
