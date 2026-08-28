@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://1urjaq28nq0i"]
 
+[ext_resource type="Script" uid="uid://v1scilwjer8f" path="res://main.gd" id="1_7mycd"]
 [ext_resource type="Texture2D" uid="uid://yn1nrilqo83i" path="res://Background/War2.png" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://opb7g3t36ue2" path="res://player.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://cnqq8a6i235ri" path="res://Scenes/lantern.tscn" id="3_h2yge"]
-[ext_resource type="PackedScene" path="res://collectible.tscn" id="5_7mycd"]
 [ext_resource type="PackedScene" uid="uid://bgmqn2kmbtff1" path="res://enemy.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://c1yenu1jj41mo" path="res://Scenes/hpbar.tscn" id="6_7mycd"]
 
@@ -67,6 +67,7 @@ size = Vector2(20, 653)
 size = Vector2(3462, 20)
 
 [node name="Node2D" type="Node2D" unique_id=2080322140]
+script = ExtResource("1_7mycd")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1472279906]
 offset_left = 10.0
@@ -299,7 +300,7 @@ position_smoothing_enabled = true
 position = Vector2(-64.999985, 169.99998)
 scale = Vector2(0.6, 0.6)
 
-[node name="Collectible" parent="." unique_id=898794062 instance=ExtResource("5_7mycd")]
+[node name="Collectible" parent="." unique_id=898794062]
 position = Vector2(731, 164)
 scale = Vector2(1.5, 1.5)
 

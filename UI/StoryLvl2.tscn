@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://rwjv3jqm32rk"]
+
+[ext_resource type="Script" uid="uid://cj44ba2y5s3vs" path="res://UI/story_lvl_2.gd" id="1_8jx6q"]
+[ext_resource type="Texture2D" uid="uid://bsj755t8x6y3l" path="res://UI/ImagesForUI/main_menu_glimmer_of_hope.png" id="2_0fwaq"]
+[ext_resource type="Texture2D" uid="uid://nx4dyv6l2hrb" path="res://UI/ImagesForUI/parchement.png" id="3_ki30l"]
+[ext_resource type="FontFile" uid="uid://c0rvo5ja7c4an" path="res://Font/Black Blood.otf" id="4_bw782"]
+
+[node name="Instructions" type="Control" unique_id=958154108]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8jx6q")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2002980436]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.01
+anchor_bottom = 1.026
+offset_right = 0.47998047
+offset_bottom = 0.15197754
+texture = ExtResource("2_0fwaq")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect" unique_id=1583289411]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -462.24
+offset_top = -136.0
+offset_right = 512.76
+offset_bottom = 796.0
+grow_horizontal = 2
+texture = ExtResource("3_ki30l")
+
+[node name="Heading" type="Label" parent="TextureRect" unique_id=1556850553]
+layout_mode = 0
+offset_left = 547.0
+offset_top = 58.0
+offset_right = 718.0
+offset_bottom = 161.0
+theme_override_colors/font_color = Color(0.00030873288, 0.0024294415, 0.15285732, 1)
+theme_override_fonts/font = ExtResource("4_bw782")
+theme_override_font_sizes/font_size = 75
+text = "STORY"
+
+[node name="Ins" type="Label" parent="." unique_id=1828885628]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.9710001
+offset_left = 480.0
+offset_top = 670.0
+offset_right = -439.0
+offset_bottom = 25.879944
+theme_override_fonts/font = ExtResource("4_bw782")
+theme_override_font_sizes/font_size = 40
+text = "Press enter Continue"
+
+[node name="Content" type="Label" parent="." unique_id=156588270]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 159.0
+offset_right = 1078.0
+offset_bottom = 724.0
+theme_override_colors/font_color = Color(0, 0.003921569, 0.15294118, 1)
+theme_override_fonts/font = ExtResource("4_bw782")
+theme_override_font_sizes/font_size = 50
+text = "Astra: Huh...the road ahead is so dark....
+Mysterious Voice 1: Son.....are you too consumed by 
+                         *voice cracks*
+Mysterious Voice 2: Keep moving son...for you shall 
+                          find light in the darkness....
+
+"
