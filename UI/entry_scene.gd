@@ -28,7 +28,7 @@ func start_attention_pulse() -> void:
 	float_tween.tween_property(label1, "position:y", start_pos.y, 0.6).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 	
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if animation_done and Input.is_action_just_pressed("StartGame"):
 		get_tree().change_scene_to_file('res://UI/MainMenu.tscn')
 

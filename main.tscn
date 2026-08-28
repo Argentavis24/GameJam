@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://1urjaq28nq0i"]
 
 [ext_resource type="Texture2D" uid="uid://yn1nrilqo83i" path="res://Background/War2.png" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://d3dnwtvv726qc" path="res://player.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://d3dnwtvv726qc" path="res://Scenes/player.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://cnqq8a6i235ri" path="res://Scenes/lantern.tscn" id="3_h2yge"]
-[ext_resource type="PackedScene" uid="uid://ku3x5exukvm1" path="res://collectible.tscn" id="4_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://dv4v44gj3cs6o" path="res://enemy.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://ku3x5exukvm1" path="res://Scenes/collectible.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://dv4v44gj3cs6o" path="res://Scenes/enemy.tscn" id="5_lquwl"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_i5d6c"]
 a = Vector2(-320, 415)
