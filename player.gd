@@ -106,11 +106,10 @@ func die() -> void:
 	else:
 		await get_tree().create_timer(1.0).timeout
 
-queue_free()
+	queue_free()
 
-get_tree().change_scene_to_file('res://UI/GameOver.tscn')
+	get_tree().change_scene_to_file('res://UI/GameOver.tscn')
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed('ui_cancel'):
 		get_tree().change_scene_to_file('res://UI/ConfirmToQuit.tscn')
-
