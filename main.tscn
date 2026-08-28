@@ -282,5 +282,5 @@ zoom = Vector2(2.5, 1.5)
 position_smoothing_enabled = true
 
 [node name="Node2D" parent="player" unique_id=4368798 instance=ExtResource("3_h2yge")]
-position = Vector2(-109.999985, 169.99998)
+position = Vector2(-64.999985, 169.99998)
 scale = Vector2(0.6, 0.6)

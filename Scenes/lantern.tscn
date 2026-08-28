@@ -174,12 +174,61 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Animation" id="Animation_fxcm8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.43633232]
+}
+
+[sub_resource type="Animation" id="Animation_6qnxg"]
+resource_name = "lantern"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.43633232, -0.43633232]
+}
+
+[sub_resource type="Animation" id="Animation_tkq0u"]
+resource_name = "lantern1"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j1t3k"]
+_data = {
+&"RESET": SubResource("Animation_fxcm8"),
+&"lantern": SubResource("Animation_6qnxg"),
+&"lantern1": SubResource("Animation_tkq0u")
+}
+
 [node name="Node2D" type="Node2D" unique_id=4368798]
+rotation = 0.43633232
+scale = Vector2(0.9619167, 0.92532456)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1522969713]
 texture_filter = 1
-position = Vector2(71, 91.25)
-scale = Vector2(5.4375, 4.5784316)
+position = Vector2(-21.831413, 117.79651)
+scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_mw2tn")
 animation = &"lantern die"
 frame_progress = 0.4598337
+offset = Vector2(6.068966, -5.023554)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1474023579]
+libraries/ = SubResource("AnimationLibrary_j1t3k")
+autoplay = &"lantern"

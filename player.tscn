@@ -320,4 +320,4 @@ scale = Vector2(0.82, 0.76222223)
 sprite_frames = SubResource("SpriteFrames_lo0rj")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.73012584
+frame_progress = 0.8972886
