@@ -504,6 +504,7 @@ rotation_smoothing_speed = 10.0
 position = Vector2(2286, 540)
 scale = Vector2(0.1, 0.1)
 script = ExtResource("8_ehv2h")
+target_scene = "res://Scenes/NextLevel.tscn"
 
 [node name="CollisionShape2D" parent="portal2" index="1" unique_id=948056234]
 scale = Vector2(22, 22)
