@@ -1,15 +1,20 @@
 extends Area2D
 
 @export var damage: int = 10
-@onready var sprite = $AnimatedSprite2D
+@onready var sprite = get_node_or_null("AnimatedSprite2D")
+
+var is_busy: bool = false
 
 func _ready() -> void:
 	hide()
 	monitoring = false
 
 func play_slash() -> void:
+	if is_busy:
+		return
+		
+	is_busy = true
 	show()
-	monitoring = false
 	monitoring = true
 	
 	if sprite:
@@ -25,6 +30,8 @@ func play_slash() -> void:
 		
 	hide()
 	monitoring = false
+	is_busy = false
+	return
 
 func check_targets() -> void:
 	for body in get_overlapping_bodies():
@@ -36,16 +43,13 @@ func deal_damage(target: Node) -> void:
 	if target == null:
 		return
 		
-	# Ignore the player and the slash itself
 	if target.is_in_group("player") or target.name == "player" or target == get_parent():
 		return
 
-	# Check the target node directly
 	if target.has_method("take_damage"):
 		target.take_damage(damage)
 		return
 
-	# Check parent if a child Area2D was hit (e.g., child Area2D on Monster)
 	var parent = target.get_parent()
 	if parent and parent != get_parent() and parent.name != "player":
 		if parent.has_method("take_damage"):

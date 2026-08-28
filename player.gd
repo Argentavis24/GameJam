@@ -4,25 +4,24 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 @export var health: int = 100
+@export var attack_cooldown: float = 0.6  # Adjust time in seconds between slashes
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var slash = get_node_or_null("slash")
 
 var is_hurt: bool = false
+var can_attack: bool = true
 
 func _ready() -> void:
 	add_to_group("player")
 
 func _physics_process(delta: float) -> void:
-	# Apply gravity
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	# Handle jump
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	# Handle horizontal movement & sprite/slash flipping
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction != 0:
 		velocity.x = direction * SPEED
@@ -38,20 +37,25 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-	# Play walking and idle animations when not hurt
 	if sprite and not is_hurt:
 		if velocity.x != 0:
 			sprite.play("walk")
 		else:
 			sprite.play("idle")
 
-	# Handle attack input
-	if Input.is_action_just_pressed("attack"):
+	# Check can_attack before processing attack input
+	if Input.is_action_just_pressed("attack") and can_attack and not is_hurt:
 		attack()
 
 func attack() -> void:
+	can_attack = false
+	
 	if slash and slash.has_method("play_slash"):
-		slash.play_slash()
+		await slash.play_slash() # Wait for slash animation to complete
+	
+	# Wait out cooldown duration
+	await get_tree().create_timer(attack_cooldown).timeout
+	can_attack = true
 
 func take_damage(amount: int) -> void:
 	if health <= 0:
@@ -75,11 +79,8 @@ func play_hurt_animation() -> void:
 func die() -> void:
 	is_hurt = true
 	velocity = Vector2.ZERO
-	
-	# Disable physics loop so inputs or gravity won't override the death state
 	set_physics_process(false)
 	
-	# Safely disable the collision shape
 	var col = get_node_or_null("CollisionShape2D")
 	if col:
 		col.set_deferred("disabled", true)
@@ -89,5 +90,7 @@ func die() -> void:
 		await sprite.animation_finished
 	else:
 		await get_tree().create_timer(1.0).timeout
-
+	
 	queue_free()
+	
+	get_tree().change_scene_to_file('res://UI/GameOver.tscn')
