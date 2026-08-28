@@ -50,7 +50,6 @@
 [ext_resource type="Texture2D" uid="uid://cx5lrvshv6j2q" path="res://player assets/Walking/0_Dark_Oracle_Walking_001.png" id="47_bobas"]
 [ext_resource type="Texture2D" uid="uid://dw40qlt0oen48" path="res://player assets/Walking/0_Dark_Oracle_Walking_002.png" id="48_vmuuc"]
 [ext_resource type="Texture2D" uid="uid://oi1gab02vq6a" path="res://player assets/Walking/0_Dark_Oracle_Walking_003.png" id="49_j6q74"]
-[ext_resource type="Texture2D" uid="uid://cl11npkveqwue" path="res://player assets/Walking/0_Dark_Oracle_Walking_004.png" id="50_hhe1y"]
 [ext_resource type="Texture2D" uid="uid://6so1y0v4sd0" path="res://player assets/Walking/0_Dark_Oracle_Walking_005.png" id="51_6jk4c"]
 [ext_resource type="Texture2D" uid="uid://dodkpwdgbr1bc" path="res://player assets/Walking/0_Dark_Oracle_Walking_006.png" id="52_8hr8l"]
 [ext_resource type="Texture2D" uid="uid://bgkye6w2dnxnf" path="res://player assets/Walking/0_Dark_Oracle_Walking_007.png" id="53_c2etn"]
@@ -167,7 +166,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"hurt",
-"speed": 5.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -245,9 +244,6 @@ animations = [{
 "texture": ExtResource("49_j6q74")
 }, {
 "duration": 1.0,
-"texture": ExtResource("50_hhe1y")
-}, {
-"duration": 1.0,
 "texture": ExtResource("51_6jk4c")
 }, {
 "duration": 1.0,
@@ -306,7 +302,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"walk",
-"speed": 5.0
+"speed": 30.0
 }]
 
 [node name="player" type="CharacterBody2D" unique_id=2029710320]
@@ -319,8 +315,7 @@ shape = SubResource("CapsuleShape2D_doy3c")
 position = Vector2(6.0000014, -11.9999695)
 scale = Vector2(0.82, 0.76222223)
 sprite_frames = SubResource("SpriteFrames_lo0rj")
-animation = &"idle"
+animation = &"hurt"
 autoplay = "idle"
-frame_progress = 0.8972886
 
 [node name="slash" parent="." unique_id=1498497371 instance=ExtResource("72_db7k")]

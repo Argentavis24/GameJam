@@ -17,16 +17,16 @@ a = Vector2(-14, 392)
 b = Vector2(21, 382)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_lo0rj"]
-a = Vector2(96, 422)
-b = Vector2(41, 407)
+a = Vector2(109, 419)
+b = Vector2(39, 407)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_wvoug"]
-a = Vector2(21, 128)
-b = Vector2(85, 133)
+a = Vector2(34, 124)
+b = Vector2(104, 132)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_hx4x2"]
-a = Vector2(-16, -3)
-b = Vector2(65, -24)
+a = Vector2(-16, -6)
+b = Vector2(80, -25)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_g6171"]
 a = Vector2(239, 304)
@@ -34,31 +34,33 @@ b = Vector2(188, 307)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_1pp3e"]
 a = Vector2(75, 12)
-b = Vector2(-3, 19)
+b = Vector2(4, 17)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_kco75"]
 a = Vector2(189, 23)
 b = Vector2(74, 15)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_5pk4g"]
-b = Vector2(52, -16)
+a = Vector2(0, 1)
+b = Vector2(40, -14)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_onw6k"]
-a = Vector2(80, 19)
+a = Vector2(80, 20)
 b = Vector2(6, 7)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_s55hn"]
 a = Vector2(99, -3)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ri0el"]
-a = Vector2(63, 16)
-b = Vector2(7, 11)
+a = Vector2(63, 17)
+b = Vector2(-7, 7)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_5gwrt"]
 a = Vector2(249, 15)
 b = Vector2(63, 17)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_djjbk"]
+a = Vector2(-7, -1)
 b = Vector2(139, -3)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4qjud"]
@@ -188,7 +190,7 @@ position = Vector2(123, 428)
 shape = SubResource("SegmentShape2D_wvoug")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=68810818]
-position = Vector2(224, 565)
+position = Vector2(223, 567)
 shape = SubResource("SegmentShape2D_hx4x2")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=2093845280]
@@ -200,7 +202,7 @@ position = Vector2(331, 422)
 shape = SubResource("SegmentShape2D_wvoug")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D" unique_id=469540952]
-position = Vector2(398, 255)
+position = Vector2(407, 261)
 shape = SubResource("SegmentShape2D_g6171")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D" unique_id=1282739067]
@@ -236,7 +238,7 @@ position = Vector2(661, 546)
 shape = SubResource("SegmentShape2D_djjbk")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" unique_id=1498818256]
-position = Vector2(1542, 140)
+position = Vector2(1541, 145)
 shape = SubResource("SegmentShape2D_i5d6c")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" unique_id=1826034584]
@@ -284,7 +286,7 @@ position = Vector2(1482, 422)
 shape = SubResource("SegmentShape2D_wvoug")
 
 [node name="CollisionShape2D38" type="CollisionShape2D" parent="StaticBody2D" unique_id=517949852]
-position = Vector2(2634, 424)
+position = Vector2(2632, 426)
 shape = SubResource("SegmentShape2D_wvoug")
 
 [node name="CollisionShape2D25" type="CollisionShape2D" parent="StaticBody2D" unique_id=1797337888]
