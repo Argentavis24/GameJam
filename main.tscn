@@ -57,6 +57,12 @@ b = Vector2(63, 17)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_djjbk"]
 b = Vector2(139, -3)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4qjud"]
+size = Vector2(20, 653)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8mmti"]
+size = Vector2(3462, 20)
+
 [node name="Node2D" type="Node2D" unique_id=2080322140]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1472279906]
@@ -216,10 +222,6 @@ shape = SubResource("SegmentShape2D_1pp3e")
 position = Vector2(1564, 536)
 shape = SubResource("SegmentShape2D_kco75")
 
-[node name="CollisionShape2D40" type="CollisionShape2D" parent="StaticBody2D" unique_id=1832957726]
-position = Vector2(1612, 662)
-shape = SubResource("SegmentShape2D_kco75")
-
 [node name="CollisionShape2D41" type="CollisionShape2D" parent="StaticBody2D" unique_id=639529479]
 position = Vector2(2716, 536)
 shape = SubResource("SegmentShape2D_kco75")
@@ -271,6 +273,14 @@ shape = SubResource("SegmentShape2D_djjbk")
 [node name="CollisionShape2D43" type="CollisionShape2D" parent="StaticBody2D" unique_id=948062163]
 position = Vector2(2950, 546)
 shape = SubResource("SegmentShape2D_djjbk")
+
+[node name="CollisionShape2D48" type="CollisionShape2D" parent="StaticBody2D" unique_id=316033535]
+position = Vector2(11, 323.5)
+shape = SubResource("RectangleShape2D_4qjud")
+
+[node name="CollisionShape2D40" type="CollisionShape2D" parent="StaticBody2D" unique_id=1145736978]
+position = Vector2(1732, 6)
+shape = SubResource("RectangleShape2D_8mmti")
 
 [node name="player" parent="." unique_id=2029710320 instance=ExtResource("2_0xm2m")]
 position = Vector2(123, 481)
