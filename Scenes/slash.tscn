@@ -59,7 +59,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"default",
-"speed": 10.0
+"speed": 29.0
 }]
 
 [node name="slash" type="Area2D" unique_id=1498497371]

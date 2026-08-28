@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 300.0
+const ACCELERATION = 2000.0
 const JUMP_VELOCITY = -600.0
 
 @export var max_health: int = 100
@@ -51,7 +52,8 @@ func _physics_process(delta: float) -> void:
 		direction -= 1.0
 
 	if direction != 0:
-		velocity.x = direction * SPEED
+		# Smooth acceleration toward target speed, scaled by delta for frame-rate independence
+		velocity.x = move_toward(velocity.x, direction * SPEED, ACCELERATION * delta)
 
 		if sprite:
 			sprite.flip_h = (direction < 0)
@@ -60,14 +62,18 @@ func _physics_process(delta: float) -> void:
 			slash.position.x = -abs(slash.position.x) if direction < 0 else abs(slash.position.x)
 			slash.scale.x = -abs(slash.scale.x) if direction < 0 else abs(slash.scale.x)
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		# Smooth deceleration toward zero, scaled by delta
+		velocity.x = move_toward(velocity.x, 0, ACCELERATION * delta)
 
 	move_and_slide()
 
 	if sprite and not is_hurt:
 		if velocity.x != 0:
+			# Match animation playback speed to how fast the player is actually moving
+			sprite.speed_scale = clamp(abs(velocity.x) / SPEED, 0.1, 1.0)
 			sprite.play("walk")
 		else:
+			sprite.speed_scale = 1.0
 			sprite.play("idle")
 
 	# Edge-detect the F key manually so holding it doesn't spam attacks
@@ -139,3 +145,4 @@ func die() -> void:
 		await get_tree().create_timer(1.0).timeout
 
 	get_tree().change_scene_to_file("res://UI/GameOver.tscn")
+	
