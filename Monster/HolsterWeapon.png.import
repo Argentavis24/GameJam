@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lgytec0mm4ry"
-path="res://.godot/imported/HolsterWeaponReaper-Sheet.png-9ec3114fa9dc3c5e9482b7d5ab563d03.ctex"
+path="res://.godot/imported/HolsterWeapon.png-aaf052bcd3c52b131e436c95fd2f057f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Monster/HolsterWeaponReaper-Sheet.png"
-dest_files=["res://.godot/imported/HolsterWeaponReaper-Sheet.png-9ec3114fa9dc3c5e9482b7d5ab563d03.ctex"]
+source_file="res://Monster/HolsterWeapon.png"
+dest_files=["res://.godot/imported/HolsterWeapon.png-aaf052bcd3c52b131e436c95fd2f057f.ctex"]
 
 [params]
 

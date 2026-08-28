@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ckdpddiybj37q"
-path="res://.godot/imported/PassiveIdleReaper-Sheet.png-e589b6c8aa93fe339c79e7f04a9dfdc8.ctex"
+path="res://.godot/imported/PassiveIdle.png-d05a3f486f02d028840b7472df89bb9e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Monster/PassiveIdleReaper-Sheet.png"
-dest_files=["res://.godot/imported/PassiveIdleReaper-Sheet.png-e589b6c8aa93fe339c79e7f04a9dfdc8.ctex"]
+source_file="res://Monster/PassiveIdle.png"
+dest_files=["res://.godot/imported/PassiveIdle.png-d05a3f486f02d028840b7472df89bb9e.ctex"]
 
 [params]
 

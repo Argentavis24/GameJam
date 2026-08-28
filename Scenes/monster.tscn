@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://tyxgliss4vdv"]
 
-[ext_resource type="Texture2D" uid="uid://bwcfl3o145vek" path="res://Monster/HostileAttackReaper-Sheet.png" id="1_682xl"]
-[ext_resource type="Texture2D" uid="uid://bsxg8ru4wh6eh" path="res://Monster/HostileIdleReaper-Sheet.png" id="2_m3gvp"]
-[ext_resource type="Texture2D" uid="uid://cku611n41vbx" path="res://Monster/HostileRunningReaper-Sheet.png" id="3_om6p4"]
-[ext_resource type="Texture2D" uid="uid://ckdpddiybj37q" path="res://Monster/PassiveIdleReaper-Sheet.png" id="4_ilra5"]
-[ext_resource type="Texture2D" uid="uid://gigv5fd2wyp8" path="res://Monster/PassiveRunningReaper-Sheet.png" id="5_fua38"]
-[ext_resource type="Texture2D" uid="uid://lgytec0mm4ry" path="res://Monster/HolsterWeaponReaper-Sheet.png" id="6_rgef3"]
-[ext_resource type="Texture2D" uid="uid://bww1lr47v7b0b" path="res://Monster/WieldWeaponReaper-Sheet.png" id="7_alyq1"]
+[ext_resource type="Texture2D" uid="uid://bwcfl3o145vek" path="res://Monster/HostileAttack.png" id="1_682xl"]
+[ext_resource type="Texture2D" uid="uid://bsxg8ru4wh6eh" path="res://Monster/HostileIdle.png" id="2_m3gvp"]
+[ext_resource type="Texture2D" uid="uid://cku611n41vbx" path="res://Monster/HostileRunning.png" id="3_om6p4"]
+[ext_resource type="Texture2D" uid="uid://ckdpddiybj37q" path="res://Monster/PassiveIdle.png" id="4_ilra5"]
+[ext_resource type="Texture2D" uid="uid://gigv5fd2wyp8" path="res://Monster/PassiveRun.png" id="5_fua38"]
+[ext_resource type="Texture2D" uid="uid://lgytec0mm4ry" path="res://Monster/HolsterWeapon.png" id="6_rgef3"]
+[ext_resource type="Texture2D" uid="uid://bww1lr47v7b0b" path="res://Monster/Wield.png" id="7_alyq1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kry3j"]
 height = 32.0
@@ -442,6 +442,7 @@ animations = [{
 }]
 
 [node name="Monster" type="Node2D" unique_id=1882059383]
+scale = Vector2(0.5, 0.5)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1426258743]
 
@@ -449,5 +450,6 @@ animations = [{
 shape = SubResource("CapsuleShape2D_kry3j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1346288846]
+scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_8jeix")
 animation = &"holster"

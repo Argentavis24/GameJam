@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dms3o2jyaymki"]
 
 [ext_resource type="Texture2D" uid="uid://yn1nrilqo83i" path="res://Background/War2.png" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://tyxgliss4vdv" path="res://Scenes/monster.tscn" id="2_bo1nx"]
 
 [node name="Node2D" type="Node2D" unique_id=2080322140]
 
@@ -25,3 +26,7 @@ offset_right = 3458.0
 offset_bottom = 650.0
 texture = ExtResource("1_jjgbg")
 expand_mode = 1
+
+[node name="Monster" parent="." unique_id=1882059383 instance=ExtResource("2_bo1nx")]
+visibility_layer = 8
+position = Vector2(368, 518)

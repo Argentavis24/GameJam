@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cku611n41vbx"
-path="res://.godot/imported/HostileRunningReaper-Sheet.png-06c913c92dc8b29822ba61c2095caf72.ctex"
+path="res://.godot/imported/HostileRunning.png-d975c8b244578fe1eb4a548eb9f5d9af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Monster/HostileRunningReaper-Sheet.png"
-dest_files=["res://.godot/imported/HostileRunningReaper-Sheet.png-06c913c92dc8b29822ba61c2095caf72.ctex"]
+source_file="res://Monster/HostileRunning.png"
+dest_files=["res://.godot/imported/HostileRunning.png-d975c8b244578fe1eb4a548eb9f5d9af.ctex"]
 
 [params]
 
