@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://k6m7ivisggfj"]
-
-[node name="character" unique_id=2123857163]
-
-[node name="AnimatedSprite2D" parent="." index="1" unique_id=412195761]
-animation = &"idle"
-autoplay = "idle"
-frame_progress = 0.0
