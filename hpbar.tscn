@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c1yenu1jj41mo"]
+
+[ext_resource type="Script" uid="uid://chso71qho8s1q" path="res://hpbar.gd" id="1_p6m11"]
+[ext_resource type="PackedScene" uid="uid://blc0jfnteyqqf" path="res://heart.tscn" id="2_mw65r"]
+
+[node name="HPbar" type="CanvasLayer" unique_id=189037822]
+script = ExtResource("1_p6m11")
+heart_scene = ExtResource("2_mw65r")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1818749424]
+offset_left = 22.0
+offset_top = 24.0
+offset_right = 548.0
+offset_bottom = 73.0
