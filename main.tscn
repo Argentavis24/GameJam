@@ -303,7 +303,10 @@ scale = Vector2(0.2, 0.2)
 position = Vector2(924.9999, -604.9999)
 scale = Vector2(0.99999994, 0.99999994)
 zoom = Vector2(2.5, 1.5)
+limit_smoothed = true
 position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+rotation_smoothing_enabled = true
 
 [node name="lantern" parent="player" unique_id=4368798 instance=ExtResource("3_h2yge")]
 position = Vector2(-64.999985, 169.99998)
@@ -316,3 +319,5 @@ scale = Vector2(3, 3)
 [node name="HPbar" parent="." unique_id=189037822 instance=ExtResource("6_7mycd")]
 
 [node name="Area2D" parent="." unique_id=1606918024 instance=ExtResource("6_272bh")]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

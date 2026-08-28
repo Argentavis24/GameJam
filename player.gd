@@ -71,6 +71,10 @@ func attack() -> void:
 	
 	await get_tree().create_timer(attack_cooldown).timeout
 	can_attack = true
+	
+	
+	
+	
 
 func take_damage(amount: int) -> void:
 	if health <= 0:
