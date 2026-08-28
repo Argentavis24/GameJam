@@ -316,7 +316,6 @@ scale = Vector2(3, 3)
 
 [node name="HPbar" parent="." unique_id=189037822 instance=ExtResource("6_7mycd")]
 
-[node name="Area2D" parent="." unique_id=1606918024 instance=ExtResource("6_272bh")]
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Area2D" to="player" method="_on_area_2d_body_entered"]
+[node name="portal" parent="." unique_id=1606918024 instance=ExtResource("6_272bh")]
+position = Vector2(3181, 506)
+scale = Vector2(0.1, 0.1)
