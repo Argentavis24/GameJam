@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dms3o2jyaymki"]
 
-[ext_resource type="Texture2D" uid="uid://yn1nrilqo83i" path="res://War2.png" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://yn1nrilqo83i" path="res://Background/War2.png" id="1_ig7tw"]
 
 [node name="Node2D" type="Node2D" unique_id=2080322140]
 

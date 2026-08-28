@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://tyxgliss4vdv"]
+
+[node name="LightMonster" type="Node2D" unique_id=1882059383]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1426258743]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=967792711]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1346288846]
