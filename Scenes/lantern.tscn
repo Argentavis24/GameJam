@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cnqq8a6i235ri"]
 
+[ext_resource type="Script" uid="uid://ter0l5ttr2pt" path="res://Scenes/lantern.gd" id="1_6qnxg"]
 [ext_resource type="Texture2D" uid="uid://08612h28404y" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_023.png" id="1_fxcm8"]
 [ext_resource type="Texture2D" uid="uid://c75ywg00hdt5p" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_029.png" id="2_6qnxg"]
 [ext_resource type="Texture2D" uid="uid://bglvrolfi73r1" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_030.png" id="3_tkq0u"]
@@ -219,6 +220,7 @@ _data = {
 [node name="lantern" type="Node2D" unique_id=4368798]
 rotation = 0.43633232
 scale = Vector2(0.9619167, 0.92532456)
+script = ExtResource("1_6qnxg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1522969713]
 texture_filter = 1

@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://c0rvo5ja7c4an" path="res://Font/Black Blood.otf" id="5_hqns4"]
 [ext_resource type="PackedScene" uid="uid://opb7g3t36ue2" path="res://player.tscn" id="6_x0ka3"]
 [ext_resource type="PackedScene" uid="uid://d2h3mefcc4pts" path="res://portal.tscn" id="7_0h7mo"]
+[ext_resource type="PackedScene" uid="uid://cnqq8a6i235ri" path="res://Scenes/lantern.tscn" id="7_eoq84"]
 [ext_resource type="Texture2D" uid="uid://dnmtymvkjprye" path="res://singleheart.png" id="8_7dov7"]
 [ext_resource type="Script" uid="uid://bphacup55smqw" path="res://portal2.gd" id="8_ehv2h"]
 [ext_resource type="Script" uid="uid://buwk23jvwkelf" path="res://skull_manager.gd" id="10_15wb7"]
@@ -22,12 +23,12 @@ a = Vector2(35, 182)
 b = Vector2(-59, 165)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_flf07"]
-a = Vector2(49, 408)
+a = Vector2(52, 419)
 b = Vector2(-30, 418)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_k73cj"]
-a = Vector2(325, 591)
-b = Vector2(398, 594)
+a = Vector2(329, 602)
+b = Vector2(400, 602)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_rjqkl"]
 a = Vector2(102, 16)
@@ -337,7 +338,7 @@ position = Vector2(74, 430)
 shape = SubResource("SegmentShape2D_ta5nu")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1150651900]
-position = Vector2(117, 190)
+position = Vector2(118, 195)
 shape = SubResource("SegmentShape2D_flf07")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1810415755]
@@ -501,6 +502,10 @@ position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 rotation_smoothing_enabled = true
 rotation_smoothing_speed = 10.0
+
+[node name="lantern" parent="player" unique_id=4368798 instance=ExtResource("7_eoq84")]
+position = Vector2(-69.99999, 164.9997)
+scale = Vector2(0.9619166, 0.92532444)
 
 [node name="portal2" parent="." unique_id=1606918024 instance=ExtResource("7_0h7mo")]
 position = Vector2(2286, 540)
