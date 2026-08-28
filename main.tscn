@@ -309,10 +309,6 @@ position_smoothing_enabled = true
 position = Vector2(-64.999985, 169.99998)
 scale = Vector2(0.6, 0.6)
 
-[node name="Collectible" parent="." unique_id=898794062]
-position = Vector2(731, 164)
-scale = Vector2(1.5, 1.5)
-
 [node name="Monster" parent="." unique_id=149892754 instance=ExtResource("5_lquwl")]
 position = Vector2(689, 488.00003)
 scale = Vector2(3, 3)
@@ -320,3 +316,5 @@ scale = Vector2(3, 3)
 [node name="HPbar" parent="." unique_id=189037822 instance=ExtResource("6_7mycd")]
 
 [node name="Area2D" parent="." unique_id=1606918024 instance=ExtResource("6_272bh")]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
