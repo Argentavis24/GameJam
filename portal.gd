@@ -23,10 +23,13 @@ func _ready() -> void:
 	else:
 		print("spawner_path did NOT resolve to a valid node")
 
+func change_scene() -> void:
+	get_tree().change_scene_to_file(target_scene)
+
 func activate_portal() -> void:
 	print("ACTIVATING PORTAL")
 	visible = true
 	monitoring = true
 
 func _on_body_entered(_body: Node2D) -> void:
-	get_tree().change_scene_to_file(target_scene)
+	call_deferred("change_scene")

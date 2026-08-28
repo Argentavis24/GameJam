@@ -12,6 +12,7 @@ var health = 100
 var max_health = 100
 
 var melee_damage = 10
+var ranged_damage =5
 var has_healed = false
 var can_attack = true
 

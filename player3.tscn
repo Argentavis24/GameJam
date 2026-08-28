@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cpdnrm7leyjqt"]
+
+[ext_resource type="Script" uid="uid://cufpbnwtncspl" path="res://player3.gd" id="1_eg78s"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1084967254]
+script = ExtResource("1_eg78s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1013697392]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=46887548]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2063919219]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1180960685]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=837938655]
