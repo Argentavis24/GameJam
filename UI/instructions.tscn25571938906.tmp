@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://vsbqroxlgkbd"]
+
+[ext_resource type="Script" uid="uid://dhdssek1kqxfl" path="res://UI/instructions.gd" id="1_1koxs"]
+[ext_resource type="Texture2D" uid="uid://bsj755t8x6y3l" path="res://UI/ImagesForUI/main_menu_glimmer_of_hope.png" id="1_81iju"]
+[ext_resource type="Texture2D" uid="uid://nx4dyv6l2hrb" path="res://UI/ImagesForUI/parchement.png" id="2_3j2k8"]
+[ext_resource type="FontFile" uid="uid://c0rvo5ja7c4an" path="res://Font/Black Blood.otf" id="3_og0bq"]
+
+[node name="Instructions" type="Control" unique_id=958154108]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1koxs")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2002980436]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.01
+anchor_bottom = 1.026
+offset_right = 0.47998047
+offset_bottom = 0.15197754
+texture = ExtResource("1_81iju")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect" unique_id=1583289411]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -246.23999
+offset_top = -136.0
+offset_right = 253.02002
+offset_bottom = 796.0
+grow_horizontal = 2
+texture = ExtResource("2_3j2k8")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TextureRect" unique_id=58139584]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.393
+anchor_bottom = 0.81200004
+offset_left = 451.0
+offset_top = 144.0
+offset_right = 307.49536
+offset_bottom = 23.035889
+
+[node name="VScrollBar" type="VScrollBar" parent="TextureRect/ScrollContainer" unique_id=185926967]
+layout_mode = 2
+
+[node name="Content" type="Label" parent="TextureRect/ScrollContainer" unique_id=156588270]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.003921569, 0.15294118, 1)
+theme_override_fonts/font = ExtResource("3_og0bq")
+theme_override_font_sizes/font_size = 25
+text = "1. Magic attacks cost 5 Light.
+    Keep your light above 20 to see 
+    clearly—if it hits 0, the dark 
+    consumes you (Game Over).
+2. Defeat Turtles to heal (+10 HP). 
+    Defeat Dragonflies to recover 
+    Light (+10 Light) and HP (+5 HP).
+3. Watch for screen shakes before 
+    Falling Spikes drop (-30 HP). 
+    Falling into the Dark Void resets you
+    to the start of the jump section.
+4. Text choices will appear throughout 
+     your run. +ve Hope guides
+     you to safety, while -ve Hope
+     lies to triggers game failure.
+
+MENU CONTROLS:
+WASD/ arrow keys - pointer control
+Space/Enter - Select
+
+GAME CONTROL:
+A/ left arrow -  go left
+S/ right arrow - go right
+Space - Jump
+"
+
+[node name="Heading" type="Label" parent="TextureRect" unique_id=1556850553]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 55.0
+offset_right = 810.0
+offset_bottom = 158.0
+theme_override_colors/font_color = Color(0.00030873288, 0.0024294415, 0.15285732, 1)
+theme_override_fonts/font = ExtResource("3_og0bq")
+theme_override_font_sizes/font_size = 75
+text = "INSTRUCTIONS"
+
+[node name="Ins" type="Label" parent="." unique_id=1828885628]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.9710001
+offset_left = 899.0
+offset_top = 605.0
+offset_right = -20.0
+offset_bottom = 18.879944
+theme_override_fonts/font = ExtResource("3_og0bq")
+theme_override_font_sizes/font_size = 40
+text = "Press esc to go
+back to main menu."
