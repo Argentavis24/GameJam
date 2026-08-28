@@ -1,5 +1,10 @@
 [gd_scene format=3 uid="uid://df2cdbgp2ifc6"]
 
+[ext_resource type="Script" uid="uid://du61nphn837q1" path="res://UI/main_menu.gd" id="1_8aown"]
+[ext_resource type="Texture2D" uid="uid://bsj755t8x6y3l" path="res://UI/ImagesForUI/main_menu_glimmer_of_hope.png" id="1_uahxu"]
+[ext_resource type="FontFile" uid="uid://uxkymxbkhl4i" path="res://Font/Black Blood.ttf" id="2_b37jj"]
+[ext_resource type="FontFile" uid="uid://c0rvo5ja7c4an" path="res://Font/Black Blood.otf" id="4_t6syg"]
+
 [node name="Control" type="Control" unique_id=319844130]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +12,51 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_8aown")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1212083150]
+layout_mode = 0
+offset_right = 1161.0
+offset_bottom = 658.0
+texture = ExtResource("1_uahxu")
+expand_mode = 1
+
+[node name="Name" type="Label" parent="." unique_id=1010138102]
+layout_mode = 0
+offset_left = 293.0
+offset_top = 93.0
+offset_right = 870.0
+offset_bottom = 331.0
+theme_override_fonts/font = ExtResource("2_b37jj")
+theme_override_font_sizes/font_size = 175
+text = "WAY OUT"
+
+[node name="Play" type="Label" parent="." unique_id=535633802]
+layout_mode = 0
+offset_left = 499.0
+offset_top = 307.0
+offset_right = 632.0
+offset_bottom = 410.0
+theme_override_fonts/font = ExtResource("2_b37jj")
+theme_override_font_sizes/font_size = 75
+text = "PLAY"
+
+[node name="Exit" type="Label" parent="." unique_id=1202838984]
+layout_mode = 0
+offset_left = 542.0
+offset_top = 463.0
+offset_right = 589.0
+offset_bottom = 505.0
+theme_override_fonts/font = ExtResource("2_b37jj")
+theme_override_font_sizes/font_size = 30
+text = "EXIT"
+
+[node name="Rules" type="Label" parent="." unique_id=2012606689]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 395.0
+offset_right = 624.0
+offset_bottom = 463.0
+theme_override_fonts/font = ExtResource("4_t6syg")
+theme_override_font_sizes/font_size = 50
+text = "RULES"
