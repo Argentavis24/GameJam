@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://c0rvo5ja7c4an" path="res://Font/Black Blood.otf" id="5_hqns4"]
 [ext_resource type="PackedScene" uid="uid://opb7g3t36ue2" path="res://player.tscn" id="6_x0ka3"]
 [ext_resource type="PackedScene" uid="uid://d2h3mefcc4pts" path="res://portal.tscn" id="7_0h7mo"]
+[ext_resource type="Texture2D" uid="uid://dnmtymvkjprye" path="res://singleheart.png" id="8_7dov7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nr8wp"]
 size = Vector2(20, 723)
@@ -501,3 +502,7 @@ rotation_smoothing_speed = 10.0
 [node name="portal" parent="." unique_id=1606918024 instance=ExtResource("7_0h7mo")]
 position = Vector2(2286, 540)
 scale = Vector2(0.1, 0.1)
+
+[node name="Singleheart" type="Sprite2D" parent="." unique_id=1545858161]
+position = Vector2(-727, 125)
+texture = ExtResource("8_7dov7")
