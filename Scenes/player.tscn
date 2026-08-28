@@ -71,8 +71,8 @@
 [ext_resource type="Texture2D" uid="uid://bpvp324mjd1en" path="res://character assets/Walking/0_Dark_Oracle_Walking_023.png" id="41_nu15y"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h2yge"]
-radius = 58.489075
-height = 155.41599
+radius = 146.0
+height = 496.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lo0rj"]
 animations = [{
@@ -311,17 +311,10 @@ scale = Vector2(0.5, 0.5)
 script = ExtResource("1_eec34")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=534976190]
-position = Vector2(1892, -828)
-scale = Vector2(2.7355554, 2.8311112)
 shape = SubResource("CapsuleShape2D_h2yge")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1527633931]
-position = Vector2(1900, -829.99994)
-scale = Vector2(2.7355554, 2.8311112)
-zoom = Vector2(1.2, 1.2)
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=412195761]
-position = Vector2(1896, -894)
-scale = Vector2(1, 1.035)
 sprite_frames = SubResource("SpriteFrames_lo0rj")
-animation = &"idle"
+animation = &"walkinng"
+autoplay = "walkinng"
+frame_progress = 0.6785189
