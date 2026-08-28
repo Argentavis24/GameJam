@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dms3o2jyaymki"]
+
+[ext_resource type="Texture2D" uid="uid://yn1nrilqo83i" path="res://War2.png" id="1_ig7tw"]
+
+[node name="Node2D" type="Node2D" unique_id=2080322140]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1472279906]
+offset_right = 1154.0
+offset_bottom = 649.0
+texture = ExtResource("1_ig7tw")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1313640400]
+offset_left = 1152.0
+offset_top = 1.0
+offset_right = 2306.0
+offset_bottom = 650.0
+texture = ExtResource("1_ig7tw")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=1158406637]
+offset_left = 2304.0
+offset_top = 1.0
+offset_right = 3458.0
+offset_bottom = 650.0
+texture = ExtResource("1_ig7tw")
+expand_mode = 1
