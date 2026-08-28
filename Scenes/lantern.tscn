@@ -155,6 +155,23 @@ animations = [{
 "loop": 1,
 "name": &"lantern start",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_bo7tc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_bmsar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0cblv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ps578")
+}],
+"loop": 1,
+"name": &"weak lantern",
+"speed": 5.0
 }]
 
 [node name="Node2D" type="Node2D" unique_id=4368798]
@@ -165,4 +182,4 @@ position = Vector2(71, 91.25)
 scale = Vector2(5.4375, 4.5784316)
 sprite_frames = SubResource("SpriteFrames_mw2tn")
 animation = &"lantern die"
-frame_progress = 0.79481107
+frame_progress = 0.04414847
