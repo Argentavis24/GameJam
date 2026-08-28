@@ -30,3 +30,13 @@ func _physics_process(delta: float) -> void:
 func attack() -> void:
 	if slash and slash.has_method("play_slash"):
 		slash.play_slash()
+
+
+
+func _quit_game():
+		get_tree().change_scene_to_file("res://UI/Quit.tscn")
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed('ui_cancel'):
+		call_deferred("_quit_game")
+		
