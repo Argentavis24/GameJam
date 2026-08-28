@@ -68,9 +68,9 @@ size = Vector2(3462, 20)
 [node name="Node2D" type="Node2D" unique_id=2080322140]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1472279906]
-offset_top = -4.0
-offset_right = 1154.0
-offset_bottom = 645.0
+offset_left = 10.0
+offset_right = 1164.0
+offset_bottom = 649.0
 texture = ExtResource("1_ig7tw")
 expand_mode = 1
 
@@ -298,10 +298,9 @@ position = Vector2(-64.999985, 169.99998)
 scale = Vector2(0.6, 0.6)
 
 [node name="Collectible" parent="." unique_id=898794062 instance=ExtResource("4_1bvp3")]
-position = Vector2(341, 496)
+position = Vector2(731, 164)
 scale = Vector2(1.5, 1.5)
 
 [node name="Monster" parent="." unique_id=149892754 instance=ExtResource("5_lquwl")]
 position = Vector2(689, 488.00003)
 scale = Vector2(3, 3)
-health = 60
