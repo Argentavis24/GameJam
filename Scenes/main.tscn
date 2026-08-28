@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://dms3o2jyaymki"]
 
+[ext_resource type="Script" uid="uid://bgc3nwpa4klh" path="res://Scenes/main.gd" id="1_bo1nx"]
 [ext_resource type="Texture2D" uid="uid://yn1nrilqo83i" path="res://Background/War2.png" id="1_jjgbg"]
 
 [node name="Game" type="Node2D" unique_id=2080322140]
+script = ExtResource("1_bo1nx")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1472279906]
 offset_right = 1154.0
