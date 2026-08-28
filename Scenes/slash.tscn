@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://db7km0l4xkkfv"]
 
 [ext_resource type="Texture2D" uid="uid://btxcu4lfla7vs" path="res://lantern/slash/Fire Slash_Frame_01.png" id="1_dx355"]
+[ext_resource type="Script" uid="uid://dfgwo1cpsmkcv" path="res://Scenes/slash.gd" id="1_g1mq5"]
+[ext_resource type="Texture2D" uid="uid://dnce66mdehqto" path="res://lantern/slash/Fire Slash_Frame_02.png" id="2_g1mq5"]
 [ext_resource type="Texture2D" uid="uid://bsk2uf3jnhhws" path="res://lantern/slash/Fire Slash_Frame_03.png" id="2_pr3ft"]
 [ext_resource type="Texture2D" uid="uid://ckfhcj3m3st1w" path="res://lantern/slash/Fire Slash_Frame_04.png" id="3_g1mq5"]
 [ext_resource type="Texture2D" uid="uid://ci1ecvo6iisdy" path="res://lantern/slash/Fire Slash_Frame_05.png" id="4_yo4t5"]
@@ -12,11 +14,18 @@
 [ext_resource type="Texture2D" uid="uid://bm5teqam1u06s" path="res://lantern/slash/Fire Slash_Frame_11.png" id="10_7pb45"]
 [ext_resource type="Texture2D" uid="uid://cqjwwk65qbhrn" path="res://lantern/slash/Fire Slash_Frame_12.png" id="11_pvqan"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_mw2tn"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mw2tn"]
+radius = 138.0
+height = 466.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lo0rj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_dx355")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g1mq5")
 }, {
 "duration": 1.0,
 "texture": ExtResource("2_pr3ft")
@@ -48,25 +57,24 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("11_pvqan")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"default",
-"speed": 5.0
+"speed": 10.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mw2tn"]
-radius = 129.0
-height = 536.0
+[node name="slash" type="Area2D" unique_id=1498497371]
+z_index = 10
+script = ExtResource("1_g1mq5")
 
-[node name="Node2D" type="Node2D" unique_id=1470906578]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=649423155]
+position = Vector2(106, -7)
+shape = SubResource("CapsuleShape2D_mw2tn")
+disabled = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1663033369]
-sprite_frames = SubResource("SpriteFrames_mw2tn")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2028689310]
+sprite_frames = SubResource("SpriteFrames_lo0rj")
 autoplay = "default"
-frame_progress = 0.48293808
+frame_progress = 0.29449773
 flip_h = true
 
-[node name="Area2D" type="Area2D" parent="AnimatedSprite2D" unique_id=1375801760]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D" unique_id=1819207260]
-position = Vector2(110, 0)
-shape = SubResource("CapsuleShape2D_mw2tn")
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

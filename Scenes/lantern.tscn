@@ -216,7 +216,7 @@ _data = {
 &"lantern1": SubResource("Animation_tkq0u")
 }
 
-[node name="Node2D" type="Node2D" unique_id=4368798]
+[node name="lantern" type="Node2D" unique_id=4368798]
 rotation = 0.43633232
 scale = Vector2(0.9619167, 0.92532456)
 

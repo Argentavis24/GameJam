@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dv4v44gj3cs6o"]
 
+[ext_resource type="Script" uid="uid://ce1i0ebqul4fx" path="res://enemy.gd" id="1_3yqyl"]
 [ext_resource type="Texture2D" uid="uid://bsxg8ru4wh6eh" path="res://Monster/HostileIdle.png" id="1_epg4t"]
 [ext_resource type="Texture2D" uid="uid://cku611n41vbx" path="res://Monster/HostileRunning.png" id="2_3yqyl"]
 [ext_resource type="Texture2D" uid="uid://ckdpddiybj37q" path="res://Monster/PassiveIdle.png" id="3_wujgv"]
@@ -293,11 +294,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8mmti"]
-radius = 11.0
-height = 32.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1mq5"]
+size = Vector2(11, 25)
 
 [node name="Monster" type="CharacterBody2D" unique_id=149892754]
+script = ExtResource("1_3yqyl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=247923944]
 shape = SubResource("CapsuleShape2D_4qjud")
@@ -310,4 +311,5 @@ frame_progress = 0.7557469
 [node name="Area2D" type="Area2D" parent="." unique_id=583836287]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=957592192]
-shape = SubResource("CapsuleShape2D_8mmti")
+position = Vector2(14, -3)
+shape = SubResource("RectangleShape2D_g1mq5")
