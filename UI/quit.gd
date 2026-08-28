@@ -73,3 +73,13 @@ func _jab_arrow() -> void:
 	jab_tween.tween_callback(func():
 		focused.emit_signal("pressed")
 	)
+
+
+func _on_yes_pressed() -> void:
+	get_tree().quit()
+
+
+
+func _on_no_pressed() -> void:
+	get_tree().change_scene_to_file('res://UI/MainMenu.tscn')
+	
