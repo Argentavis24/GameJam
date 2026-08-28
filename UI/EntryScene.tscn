@@ -10,9 +10,9 @@ anchors_preset = 0
 script = ExtResource("1_6gned")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=994052249]
-layout_mode = 0
-offset_right = 1156.0
-offset_bottom = 662.0
+layout_mode = 1
+offset_right = 1217.0
+offset_bottom = 745.0
 texture = ExtResource("1_xqave")
 expand_mode = 1
 
@@ -23,10 +23,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 157.0
-offset_top = 156.0
-offset_right = 1044.0
-offset_bottom = 496.0
+offset_left = 171.0
+offset_top = 166.0
+offset_right = 1058.0
+offset_bottom = 506.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_wysbq")
@@ -35,10 +35,10 @@ text = "WAY  OUT"
 
 [node name="Start" type="Label" parent="." unique_id=1204748340]
 layout_mode = 0
-offset_left = 427.0
-offset_top = 464.0
-offset_right = 760.0
-offset_bottom = 532.0
+offset_left = 448.0
+offset_top = 478.0
+offset_right = 781.0
+offset_bottom = 546.0
 theme_override_fonts/font = ExtResource("2_wysbq")
 theme_override_font_sizes/font_size = 50
 text = "Press Space To Begin"

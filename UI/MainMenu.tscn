@@ -39,10 +39,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.75500005
 anchor_bottom = 0.51100004
-offset_left = 293.0
-offset_top = 93.0
-offset_right = 0.2399292
-offset_bottom = -0.12802124
+offset_left = 311.0
+offset_top = 151.0
+offset_right = 18.23993
+offset_bottom = 57.87198
 theme_override_fonts/font = ExtResource("2_b37jj")
 theme_override_font_sizes/font_size = 175
 text = "WAY OUT"
@@ -73,7 +73,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("4_t6syg")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5to0o")
-text = "RULES"
+text = "INSTRUCTIONS"
 
 [node name="Exit" type="Button" parent="Menu" unique_id=178282907]
 layout_mode = 2

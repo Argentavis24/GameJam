@@ -58,8 +58,11 @@ func _jab_arrow() -> void:
 func _on_play_pressed() -> void:
 	get_tree().change_scene_to_file('res://main.tscn')
 
-func _on_rules_pressed() -> void:
-	print("rules")
 
 func _on_exit_pressed() -> void:
 	get_tree().change_scene_to_file("res://UI/Quit.tscn")
+
+
+func _on_rules_pressed() -> void:
+	get_tree().change_scene_to_file('res://UI/instructions.tscn')
+	
