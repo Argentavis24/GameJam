@@ -3,6 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://dnmtymvkjprye" path="res://singleheart.png" id="1_cixvg"]
 
 [node name="Heart" type="TextureRect" unique_id=2007240071]
+custom_minimum_size = Vector2(16, 16)
+offset_left = -38.0
+offset_top = -32.0
+offset_right = -6.0
+offset_bottom = -2.0
 texture = ExtResource("1_cixvg")
-expand_mode = 3
+expand_mode = 1
 stretch_mode = 4

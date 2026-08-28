@@ -5,11 +5,9 @@ enum State { PASSIVE, WIELDING, CHASE, ATTACK, DEAD }
 @export var health: int = 30
 @export var speed: float = 100.0
 @export var detection_range: float = 250.0
-@export var attack_range: float = 80.0  # Slightly larger range to fit the scythe swing
+@export var attack_range: float = 80.0
 @export var damage: int = 15
-
-@export var attack_delay: float = 0.4
-@export var attack_cooldown: float = 0.8
+@export var attack_cooldown: float = 1.0
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -18,6 +16,9 @@ var player: CharacterBody2D = null
 var is_attacking: bool = false
 var facing_left: bool = false
 
+func _ready() -> void:
+	add_to_group("enemy")
+
 func _physics_process(delta: float) -> void:
 	if current_state == State.DEAD:
 		return
@@ -25,11 +26,8 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	# Locate the player node dynamically
 	if not player:
 		player = get_tree().get_first_node_in_group("player") as CharacterBody2D
-		if not player:
-			player = get_node_or_null("../player") as CharacterBody2D
 
 	var dist_to_player = global_position.distance_to(player.global_position) if player else 9999.0
 
@@ -65,7 +63,6 @@ func update_facing_direction() -> void:
 		return
 		
 	facing_left = (player.global_position.x < global_position.x)
-	
 	if sprite:
 		sprite.flip_h = facing_left
 
@@ -91,16 +88,13 @@ func start_attack_sequence() -> void:
 	if sprite:
 		sprite.frame = 0
 		sprite.play("hostile attack")
+		await sprite.animation_finished
+	else:
+		await get_tree().create_timer(0.5).timeout
 
-	# Wind-up time before damage connects
-	await get_tree().create_timer(attack_delay).timeout
-
-	# Apply damage if player is within range
 	if player:
 		var current_dist = global_position.distance_to(player.global_position)
-		
 		if current_dist <= attack_range + 20.0:
-			print("Enemy successfully hit player!")
 			if player.has_method("take_damage"):
 				player.take_damage(damage)
 

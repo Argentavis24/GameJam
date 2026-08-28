@@ -3,17 +3,31 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+@export var max_health: int = 100
 @export var health: int = 100
-@export var attack_cooldown: float = 0.6  # Adjust time in seconds between slashes
+@export var attack_cooldown: float = 1.0
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var slash = get_node_or_null("slash")
+var slash: Area2D = null
 
 var is_hurt: bool = false
 var can_attack: bool = true
 
 func _ready() -> void:
 	add_to_group("player")
+	
+	slash = find_child("slash", true, false) as Area2D
+	if not slash:
+		slash = find_child("Slash", true, false) as Area2D
+
+	# Wait 1 frame so CanvasLayer nodes in the main scene finish loading
+	await get_tree().process_frame
+	sync_hp_bar()
+
+func sync_hp_bar() -> void:
+	var hp_bar = get_tree().get_first_node_in_group("hpbar")
+	if hp_bar and hp_bar.has_method("update_health"):
+		hp_bar.update_health(health, max_health)
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -43,7 +57,6 @@ func _physics_process(delta: float) -> void:
 		else:
 			sprite.play("idle")
 
-	# Check can_attack before processing attack input
 	if Input.is_action_just_pressed("attack") and can_attack and not is_hurt:
 		attack()
 
@@ -51,9 +64,8 @@ func attack() -> void:
 	can_attack = false
 	
 	if slash and slash.has_method("play_slash"):
-		await slash.play_slash() # Wait for slash animation to complete
+		slash.play_slash()
 	
-	# Wait out cooldown duration
 	await get_tree().create_timer(attack_cooldown).timeout
 	can_attack = true
 
@@ -62,7 +74,10 @@ func take_damage(amount: int) -> void:
 		return
 		
 	health -= amount
+	health = max(0, health)
 	print("Player health: ", health)
+	
+	sync_hp_bar()
 	
 	if health <= 0:
 		die()
@@ -90,7 +105,5 @@ func die() -> void:
 		await sprite.animation_finished
 	else:
 		await get_tree().create_timer(1.0).timeout
-	
+
 	queue_free()
-	
-	get_tree().change_scene_to_file('res://UI/GameOver.tscn')
