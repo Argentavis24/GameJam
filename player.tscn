@@ -70,7 +70,6 @@
 [ext_resource type="Texture2D" uid="uid://cyitvftndiywh" path="res://player assets/Walking/0_Dark_Oracle_Walking_021.png" id="67_dkvgp"]
 [ext_resource type="Texture2D" uid="uid://blhysso3lf1u" path="res://player assets/Walking/0_Dark_Oracle_Walking_022.png" id="68_siwmy"]
 [ext_resource type="Texture2D" uid="uid://bpvp324mjd1en" path="res://player assets/Walking/0_Dark_Oracle_Walking_023.png" id="69_djlqh"]
-[ext_resource type="PackedScene" path="res://hpbar.tscn" id="71_fkf2u"]
 [ext_resource type="PackedScene" uid="uid://db7km0l4xkkfv" path="res://Scenes/slash.tscn" id="72_db7k"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_doy3c"]
@@ -325,5 +324,3 @@ autoplay = "idle"
 frame_progress = 0.8972886
 
 [node name="slash" parent="." unique_id=1498497371 instance=ExtResource("72_db7k")]
-
-[node name="HPbar" parent="." unique_id=189037822 instance=ExtResource("71_fkf2u")]
