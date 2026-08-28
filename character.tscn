@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://k6m7ivisggfj"]
 
 [ext_resource type="Texture2D" uid="uid://camr2dkgag56k" path="res://character assets/Hurt/0_Dark_Oracle_Hurt_000.png" id="1_1pwx4"]
+[ext_resource type="Script" uid="uid://2bchg37cgqvu" path="res://character.gd" id="1_eec34"]
 [ext_resource type="Texture2D" uid="uid://c6p8cqelmwjul" path="res://character assets/Idle/0_Dark_Oracle_Idle_001.png" id="1_lpiy1"]
 [ext_resource type="Texture2D" uid="uid://biwgcs8g2hrup" path="res://character assets/Dying/0_Dark_Oracle_Dying_000.png" id="1_x63g7"]
 [ext_resource type="Texture2D" uid="uid://cnkufer5dl6mq" path="res://character assets/Idle/0_Dark_Oracle_Idle_002.png" id="2_88tkl"]
@@ -69,8 +70,9 @@
 [ext_resource type="Texture2D" uid="uid://blhysso3lf1u" path="res://character assets/Walking/0_Dark_Oracle_Walking_022.png" id="40_hy0pa"]
 [ext_resource type="Texture2D" uid="uid://bpvp324mjd1en" path="res://character assets/Walking/0_Dark_Oracle_Walking_023.png" id="41_nu15y"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mw2tn"]
-size = Vector2(214.97961, 432.55984)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h2yge"]
+radius = 58.489075
+height = 155.41599
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lo0rj"]
 animations = [{
@@ -304,20 +306,22 @@ animations = [{
 "speed": 18.0
 }]
 
-[node name="character" type="Node2D" unique_id=325947527]
-metadata/_edit_group_ = true
+[node name="character" type="CharacterBody2D" unique_id=2123857163]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_eec34")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1371948604]
-position = Vector2(1905, -1196)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=534976190]
-position = Vector2(-12, 245)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=534976190]
+position = Vector2(1892, -828)
 scale = Vector2(2.7355554, 2.8311112)
-shape = SubResource("RectangleShape2D_mw2tn")
+shape = SubResource("CapsuleShape2D_h2yge")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1527633931]
+position = Vector2(1900, -829.99994)
+scale = Vector2(2.7355554, 2.8311112)
+zoom = Vector2(1.2, 1.2)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=412195761]
-position = Vector2(1927.9999, -1176)
-scale = Vector2(2.7355556, 2.8311112)
+position = Vector2(1896, -894)
+scale = Vector2(1, 1.035)
 sprite_frames = SubResource("SpriteFrames_lo0rj")
-animation = &"dying"
-frame_progress = 0.3968945
+animation = &"idle"
