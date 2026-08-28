@@ -498,6 +498,6 @@ position_smoothing_speed = 10.0
 rotation_smoothing_enabled = true
 rotation_smoothing_speed = 10.0
 
-[node name="Area2D" parent="." unique_id=1606918024 instance=ExtResource("7_7j8ne")]
+[node name="portal" parent="." unique_id=1606918024 instance=ExtResource("7_7j8ne")]
 position = Vector2(2286, 540)
 scale = Vector2(0.1, 0.1)
