@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://4ar8g30mrue4"]
+
+[ext_resource type="Script" uid="uid://c21akkgpbtxip" path="res://UI/quit.gd" id="1_hv00g"]
+[ext_resource type="Texture2D" uid="uid://bsj755t8x6y3l" path="res://UI/ImagesForUI/main_menu_glimmer_of_hope.png" id="2_7v16p"]
+[ext_resource type="FontFile" uid="uid://uxkymxbkhl4i" path="res://Font/Black Blood.ttf" id="3_cl4a4"]
+[ext_resource type="FontFile" uid="uid://c0rvo5ja7c4an" path="res://Font/Black Blood.otf" id="4_1fha4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_84tr2"]
+texture = ExtResource("2_7v16p")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y6s48"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5to0o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y8k03"]
+
+[node name="Control" type="Control" unique_id=319844130]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hv00g")
+
+[node name="TextureRect" type="Panel" parent="." unique_id=381888595]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.008
+anchor_bottom = 1.0150001
+offset_right = -0.21606445
+offset_bottom = 0.27990723
+theme_override_styles/panel = SubResource("StyleBoxTexture_84tr2")
+
+[node name="Name" type="Label" parent="." unique_id=1010138102]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.75500005
+anchor_bottom = 0.51100004
+offset_left = 293.0
+offset_top = 93.0
+offset_right = 0.2399292
+offset_bottom = -0.12802124
+theme_override_fonts/font = ExtResource("3_cl4a4")
+theme_override_font_sizes/font_size = 175
+text = "WAY OUT"
+
+[node name="Menu" type="VBoxContainer" parent="." unique_id=779393266]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.643
+anchor_right = 0.5
+anchor_bottom = 0.643
+offset_left = -66.5
+offset_top = -17.664001
+offset_right = 66.5
+offset_bottom = 17.835999
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Question" type="Button" parent="Menu" unique_id=951936801]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_cl4a4")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_y6s48")
+text = "ARE YOU SURE YOU WANT TO QUIT?"
+
+[node name="NO" type="Button" parent="Menu" unique_id=702434480]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_1fha4")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5to0o")
+text = "NO"
+
+[node name="YES" type="Button" parent="Menu" unique_id=178282907]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_cl4a4")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_y8k03")
+text = "YES"
+
+[node name="Arrow" type="Label" parent="." unique_id=1241243246]
+layout_mode = 1
+offset_right = 39.0
+offset_bottom = 113.0
+rotation = 4.712389
+theme_override_fonts/font = ExtResource("4_1fha4")
+theme_override_font_sizes/font_size = 125
+text = "†"
+
+[connection signal="pressed" from="Menu/Question" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Menu/NO" to="." method="_on_rules_pressed"]
+[connection signal="pressed" from="Menu/YES" to="." method="_on_exit_pressed"]
