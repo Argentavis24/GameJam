@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cbcwv25c8ij2j"]
+[gd_scene format=3 uid="uid://df3ipnt3ofd4e"]
 
 [ext_resource type="Texture2D" uid="uid://upsn7yfow4wp" path="res://Background/orig_big.png" id="1_d21ai"]
 [ext_resource type="Texture2D" uid="uid://bvnixcisy6fcq" path="res://dark_castle_tileset.png" id="2_rj586"]
@@ -505,6 +505,11 @@ position = Vector2(2286, 540)
 scale = Vector2(0.1, 0.1)
 script = ExtResource("8_ehv2h")
 
+[node name="CollisionShape2D" parent="portal2" index="1" unique_id=948056234]
+scale = Vector2(22, 22)
+
 [node name="Singleheart" type="Sprite2D" parent="." unique_id=1545858161]
 position = Vector2(-727, 125)
 texture = ExtResource("8_7dov7")
+
+[editable path="portal2"]
