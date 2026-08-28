@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://upsn7yfow4wp" path="res://Background/orig_big.png" id="1_jg0dc"]
 [ext_resource type="Texture2D" uid="uid://bvnixcisy6fcq" path="res://dark_castle_tileset.png" id="2_nmjpi"]
 [ext_resource type="PackedScene" uid="uid://b3t6nydew3d80" path="res://Scenes/MovingPlatform.tscn" id="4_1y8me"]
+[ext_resource type="PackedScene" uid="uid://opb7g3t36ue2" path="res://player.tscn" id="4_n7ypv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8mmti"]
 size = Vector2(20, 723)
@@ -258,7 +259,7 @@ shape = SubResource("SegmentShape2D_4qlt7")
 position = Vector2(-1, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=326630584]
-position = Vector2(1025, 360)
+position = Vector2(2392, 370)
 shape = SubResource("RectangleShape2D_8mmti")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2" unique_id=531270306]
@@ -343,3 +344,13 @@ scale = Vector2(3.99, 3.99)
 [node name="MovingPLTFM2" parent="." unique_id=1581002498 instance=ExtResource("4_1y8me")]
 position = Vector2(1209, 424)
 scale = Vector2(3.99, 3.99)
+
+[node name="player" parent="." unique_id=2029710320 instance=ExtResource("4_n7ypv")]
+position = Vector2(78, 556.00006)
+scale = Vector2(0.2, 0.2)
+
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=1306108724]
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+rotation_smoothing_enabled = true
+rotation_smoothing_speed = 10.0
