@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://unf5hc23twd7"]
 
+[ext_resource type="Texture2D" uid="uid://bsj755t8x6y3l" path="res://UI/ImagesForUI/main_menu_glimmer_of_hope.png" id="1_3jaq6"]
+
 [node name="Control" type="Control" unique_id=1354531972]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +9,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1613231124]
+layout_mode = 0
+offset_right = 1177.0
+offset_bottom = 672.0
+texture = ExtResource("1_3jaq6")
+expand_mode = 1
