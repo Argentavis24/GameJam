@@ -69,7 +69,6 @@ script = ExtResource("1_g1mq5")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=649423155]
 position = Vector2(106, -7)
 shape = SubResource("CapsuleShape2D_mw2tn")
-disabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2028689310]
 sprite_frames = SubResource("SpriteFrames_lo0rj")

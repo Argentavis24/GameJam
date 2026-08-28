@@ -70,6 +70,7 @@
 [ext_resource type="Texture2D" uid="uid://cyitvftndiywh" path="res://player assets/Walking/0_Dark_Oracle_Walking_021.png" id="67_dkvgp"]
 [ext_resource type="Texture2D" uid="uid://blhysso3lf1u" path="res://player assets/Walking/0_Dark_Oracle_Walking_022.png" id="68_siwmy"]
 [ext_resource type="Texture2D" uid="uid://bpvp324mjd1en" path="res://player assets/Walking/0_Dark_Oracle_Walking_023.png" id="69_djlqh"]
+[ext_resource type="PackedScene" uid="uid://db7km0l4xkkfv" path="res://Scenes/slash.tscn" id="71_fkf2u"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_doy3c"]
 radius = 125.0
@@ -123,7 +124,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("15_7c55y")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"die",
 "speed": 5.0
 }, {
@@ -164,7 +165,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("27_qicb8")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"hurt",
 "speed": 5.0
 }, {
@@ -223,7 +224,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("45_a5i73")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"idle",
 "speed": 15.0
 }, {
@@ -303,7 +304,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("69_djlqh")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"walk",
 "speed": 5.0
 }]
@@ -314,10 +315,12 @@ script = ExtResource("1_va2xi")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=681945245]
 shape = SubResource("CapsuleShape2D_doy3c")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D" unique_id=5874129]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=5874129]
 position = Vector2(6.0000014, -11.9999695)
 scale = Vector2(0.82, 0.76222223)
 sprite_frames = SubResource("SpriteFrames_lo0rj")
-animation = &"idle"
-autoplay = "idle"
-frame_progress = 0.30152035
+animation = &"walk"
+
+[node name="slash" parent="." unique_id=1498497371 instance=ExtResource("71_fkf2u")]
+position = Vector2(6.0000014, -11.9999695)
+scale = Vector2(0.82, 0.76222223)
