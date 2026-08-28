@@ -3,9 +3,23 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+var is_live = true
 
+func collectible_pickup():
+	$HpBar.heal()
+	
+func hit():
+	$HpBar.hit()
+	
+func die() -> void:
+	is_live = false
+	$AnimationPlayer.play("Die")
 
 func _physics_process(delta: float) -> void:
+	
+	if not is_live:
+		return
+		
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta

@@ -17,13 +17,16 @@ func setup_hp():
 	
 func heal():
 	current_hp += 1
+	setup_hp()
 	
 func hit():
 	current_hp -= 1
-
+	setup_hp()
+	
 func validate_hp():
 		current_hp = [current_hp, max_hp].min()
-		
+		if current_hp <=0:
+			get_parent().die()
 
 func clean_current_representation():
 	for child in $HBoxContainer.get_children():
