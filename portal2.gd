@@ -8,4 +8,4 @@ func _ready() -> void:
 
 # Prefixed _body with underscore to eliminate the UNUSED_PARAMETER warning
 func _on_body_entered(_body: Node2D) -> void:
-	get_tree().change_scene_to_file('res://UI/StoryLvl2.tscn')
+	get_tree().change_scene_to_file('res://UI/StoryLvl2-3.tscn')
