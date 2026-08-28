@@ -73,7 +73,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("4_t6syg")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5to0o")
-text = "RULES"
+text = "INSTRUCTIONS"
 
 [node name="Exit" type="Button" parent="Menu" unique_id=178282907]
 layout_mode = 2
