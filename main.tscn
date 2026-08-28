@@ -303,15 +303,14 @@ scale = Vector2(0.2, 0.2)
 position = Vector2(924.9999, -604.9999)
 scale = Vector2(0.99999994, 0.99999994)
 zoom = Vector2(2.5, 1.5)
+limit_smoothed = true
 position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+rotation_smoothing_enabled = true
 
 [node name="lantern" parent="player" unique_id=4368798 instance=ExtResource("3_h2yge")]
 position = Vector2(-64.999985, 169.99998)
 scale = Vector2(0.6, 0.6)
-
-[node name="Collectible" parent="." unique_id=898794062]
-position = Vector2(731, 164)
-scale = Vector2(1.5, 1.5)
 
 [node name="Monster" parent="." unique_id=149892754 instance=ExtResource("5_lquwl")]
 position = Vector2(689, 488.00003)
