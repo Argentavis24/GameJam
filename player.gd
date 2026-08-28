@@ -68,3 +68,11 @@ func die() -> void:
 		sprite.play("die")
 		await get_tree().create_timer(0.5).timeout
 	queue_free()
+
+func _quit_game():
+	get_tree().change_scene_to_file('res://UI/ConfirmToQuit.tscn')
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed('ui_cancel'):
+		call_deferred("_quit_game")
+
