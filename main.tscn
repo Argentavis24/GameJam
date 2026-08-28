@@ -309,10 +309,6 @@ position_smoothing_enabled = true
 position = Vector2(-64.999985, 169.99998)
 scale = Vector2(0.6, 0.6)
 
-[node name="Collectible" parent="." unique_id=898794062]
-position = Vector2(731, 164)
-scale = Vector2(1.5, 1.5)
-
 [node name="Monster" parent="." unique_id=149892754 instance=ExtResource("5_lquwl")]
 position = Vector2(689, 488.00003)
 scale = Vector2(3, 3)
