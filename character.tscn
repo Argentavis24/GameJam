@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://k6m7ivisggfj"]
+
+[ext_resource type="Texture2D" uid="uid://c6p8cqelmwjul" path="res://character assets/Idle/0_Dark_Oracle_Idle_001.png" id="1_lpiy1"]
+[ext_resource type="Texture2D" uid="uid://cnkufer5dl6mq" path="res://character assets/Idle/0_Dark_Oracle_Idle_002.png" id="2_88tkl"]
+[ext_resource type="Texture2D" uid="uid://m61md3hw4spi" path="res://character assets/Idle/0_Dark_Oracle_Idle_003.png" id="3_y0ipg"]
+[ext_resource type="Texture2D" uid="uid://db8ylcpnyfedd" path="res://character assets/Idle/0_Dark_Oracle_Idle_004.png" id="4_kjduu"]
+[ext_resource type="Texture2D" uid="uid://4c8srgdvc700" path="res://character assets/Idle/0_Dark_Oracle_Idle_005.png" id="5_3d8aq"]
+[ext_resource type="Texture2D" uid="uid://5felm00l3ph1" path="res://character assets/Idle/0_Dark_Oracle_Idle_006.png" id="6_8i6g0"]
+[ext_resource type="Texture2D" uid="uid://dcabkwkd5k8nx" path="res://character assets/Idle/0_Dark_Oracle_Idle_007.png" id="7_r5wlx"]
+[ext_resource type="Texture2D" uid="uid://cjtfu7i7qt53o" path="res://character assets/Idle/0_Dark_Oracle_Idle_008.png" id="8_1r1pa"]
+[ext_resource type="Texture2D" uid="uid://buhyg350glj07" path="res://character assets/Idle/0_Dark_Oracle_Idle_009.png" id="9_hvi53"]
+[ext_resource type="Texture2D" uid="uid://bo5mag7bs4inv" path="res://character assets/Idle/0_Dark_Oracle_Idle_010.png" id="10_rr203"]
+[ext_resource type="Texture2D" uid="uid://bdty3liygsayf" path="res://character assets/Idle/0_Dark_Oracle_Idle_011.png" id="11_8vvwr"]
+[ext_resource type="Texture2D" uid="uid://8yxf721a4r3g" path="res://character assets/Idle/0_Dark_Oracle_Idle_012.png" id="12_5said"]
+[ext_resource type="Texture2D" uid="uid://dya0u64yxhy17" path="res://character assets/Idle/0_Dark_Oracle_Idle_013.png" id="13_pm3tn"]
+[ext_resource type="Texture2D" uid="uid://b50gh831egkqy" path="res://character assets/Idle/0_Dark_Oracle_Idle_014.png" id="14_xvb2f"]
+[ext_resource type="Texture2D" uid="uid://du0khhlcl65f1" path="res://character assets/Idle/0_Dark_Oracle_Idle_015.png" id="15_uswop"]
+[ext_resource type="Texture2D" uid="uid://g306x6qj6c6p" path="res://character assets/Idle/0_Dark_Oracle_Idle_016.png" id="16_shm3m"]
+[ext_resource type="Texture2D" uid="uid://70tye0sju7a1" path="res://character assets/Idle/0_Dark_Oracle_Idle_017.png" id="17_go3uk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mw2tn"]
+size = Vector2(214.97961, 432.55984)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lo0rj"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lpiy1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_88tkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_y0ipg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kjduu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3d8aq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8i6g0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_r5wlx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1r1pa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hvi53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_rr203")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8vvwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5said")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_pm3tn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_xvb2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_uswop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_shm3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_go3uk")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 15.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=325947527]
+position = Vector2(1798, -401)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1371948604]
+position = Vector2(1905, -1196)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=534976190]
+position = Vector2(-1910, 1226)
+scale = Vector2(2.7355554, 2.8311112)
+shape = SubResource("RectangleShape2D_mw2tn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=412195761]
+position = Vector2(29.999878, -15)
+scale = Vector2(2.7355556, 2.8311112)
+sprite_frames = SubResource("SpriteFrames_lo0rj")
+animation = &"idle"
+frame_progress = 0.5584718
