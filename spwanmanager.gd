@@ -6,7 +6,6 @@ extends Node2D
 @onready var spawn_points: Array[Node] = get_children()
 
 func _ready() -> void:
-	# Small delay to allow the level scene tree to fully load
 	await get_tree().process_frame
 	start_spawning_turns()
 
@@ -16,6 +15,10 @@ func start_spawning_turns() -> void:
 		return
 
 	for i in range(spawn_points.size()):
+		# Stop execution safely if the scene/tree is destroyed (e.g., Player Dies or Portal triggers)
+		if not is_inside_tree():
+			return
+			
 		var current_point = spawn_points[i] as Node2D
 		print("Spawning enemy ", i + 1, " at position: ", current_point.global_position)
 		
@@ -24,22 +27,26 @@ func start_spawning_turns() -> void:
 		if is_instance_valid(enemy):
 			await enemy.tree_exited
 			
+		# Verify scene tree validity before calling create_timer
+		if not is_inside_tree() or get_tree() == null:
+			return
+			
 		await get_tree().create_timer(delay_between_turns).timeout
 
-	print("All 4 turns completed!")
+	print("All turns completed!")
 
 func spawn_enemy_at(spawn_position: Vector2) -> Node2D:
 	if not enemy_scene:
 		print("Error: No Enemy Scene assigned in SpawnerManager Inspector!")
 		return null
 
+	if not is_inside_tree() or get_tree() == null:
+		return null
+
 	var enemy_instance = enemy_scene.instantiate() as Node2D
 	
-	# Place enemy directly in the level root scene
 	get_tree().current_scene.add_child(enemy_instance)
 	enemy_instance.global_position = spawn_position
-	
-	# Ensure the enemy appears in front of background visuals
 	enemy_instance.z_index = 5
 	
 	return enemy_instance
