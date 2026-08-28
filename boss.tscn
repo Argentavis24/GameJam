@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bwrfl6tpmffkh"]
+
+[ext_resource type="Script" uid="uid://by3vvhljuwmdx" path="res://boss.gd" id="1_6xxrv"]
+[ext_resource type="Texture2D" uid="uid://u3c0v8mwt782" path="res://Necroman.png" id="2_skx2t"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8mmti"]
+radius = 27.0
+height = 56.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4qjud"]
+radius = 18.0
+height = 40.0
+
+[node name="Boss" type="CharacterBody2D" unique_id=728764368]
+script = ExtResource("1_6xxrv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1889746851]
+texture = ExtResource("2_skx2t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2040127331]
+shape = SubResource("CapsuleShape2D_8mmti")
+
+[node name="MeleeHitbox" type="Area2D" parent="." unique_id=1241438863]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeHitbox" unique_id=63802778]
+position = Vector2(12, 0)
+shape = SubResource("CapsuleShape2D_4qjud")
+
+[node name="RangedSpawn" type="Marker2D" parent="." unique_id=763205137]
+
+[node name="AttackTimer" type="Timer" parent="." unique_id=768462078]
+
+[node name="HealTimer" type="Timer" parent="." unique_id=2080910251]
