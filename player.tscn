@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d3dnwtvv726qc"]
 
 [ext_resource type="Texture2D" uid="uid://biwgcs8g2hrup" path="res://player assets/Dying/0_Dark_Oracle_Dying_000.png" id="1_mgmjd"]
+[ext_resource type="Script" uid="uid://cs4qkh4k6ey2b" path="res://player.gd" id="1_va2xi"]
 [ext_resource type="Texture2D" uid="uid://cv5t8v1ja1plc" path="res://player assets/Dying/0_Dark_Oracle_Dying_001.png" id="2_va2xi"]
 [ext_resource type="Texture2D" uid="uid://bgc0kbgwb68xb" path="res://player assets/Dying/0_Dark_Oracle_Dying_002.png" id="3_fkf2u"]
 [ext_resource type="Texture2D" uid="uid://dyan4au471yi" path="res://player assets/Dying/0_Dark_Oracle_Dying_003.png" id="4_s7jk6"]
@@ -69,6 +70,10 @@
 [ext_resource type="Texture2D" uid="uid://cyitvftndiywh" path="res://player assets/Walking/0_Dark_Oracle_Walking_021.png" id="67_dkvgp"]
 [ext_resource type="Texture2D" uid="uid://blhysso3lf1u" path="res://player assets/Walking/0_Dark_Oracle_Walking_022.png" id="68_siwmy"]
 [ext_resource type="Texture2D" uid="uid://bpvp324mjd1en" path="res://player assets/Walking/0_Dark_Oracle_Walking_023.png" id="69_djlqh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_doy3c"]
+radius = 125.0
+height = 332.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lo0rj"]
 animations = [{
@@ -304,10 +309,14 @@ animations = [{
 }]
 
 [node name="player" type="CharacterBody2D" unique_id=2029710320]
+script = ExtResource("1_va2xi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=681945245]
+shape = SubResource("CapsuleShape2D_doy3c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D" unique_id=5874129]
+position = Vector2(6.0000014, -11.9999695)
+scale = Vector2(0.82, 0.76222223)
 sprite_frames = SubResource("SpriteFrames_lo0rj")
-animation = &"walk"
-frame_progress = 0.9162872
+animation = &"idle"
+frame_progress = 0.15239787
