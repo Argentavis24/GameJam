@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://vsbqroxlgkbd"]
+
+[ext_resource type="Texture2D" uid="uid://bsj755t8x6y3l" path="res://UI/ImagesForUI/main_menu_glimmer_of_hope.png" id="1_81iju"]
+
+[node name="Instructions" type="Control" unique_id=958154108]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2002980436]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.01
+anchor_bottom = 1.026
+offset_right = 0.47998047
+offset_bottom = 0.15197754
+texture = ExtResource("1_81iju")
+expand_mode = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TextureRect" unique_id=1573016997]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VScrollBar" type="VScrollBar" parent="TextureRect/ScrollContainer" unique_id=1380410195]
+layout_mode = 2
