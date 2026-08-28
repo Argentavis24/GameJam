@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bgmqn2kmbtff1" path="res://enemy.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://c1yenu1jj41mo" path="res://Scenes/hpbar.tscn" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://d2h3mefcc4pts" path="res://portal.tscn" id="6_272bh"]
+[ext_resource type="Script" uid="uid://b1mu6fu2cagyy" path="res://spwanmanager.gd" id="7_272bh"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_i5d6c"]
 a = Vector2(-320, 415)
@@ -90,6 +91,22 @@ offset_right = 3462.0
 offset_bottom = 650.0
 texture = ExtResource("1_ig7tw")
 expand_mode = 1
+
+[node name="spwanmanager" type="Node2D" parent="." unique_id=447823859]
+script = ExtResource("7_272bh")
+enemy_scene = ExtResource("5_lquwl")
+
+[node name="Marker2D" type="Marker2D" parent="spwanmanager" unique_id=190891092]
+position = Vector2(792, 506)
+
+[node name="Marker2D2" type="Marker2D" parent="spwanmanager" unique_id=1323521827]
+position = Vector2(1375, 428)
+
+[node name="Marker2D3" type="Marker2D" parent="spwanmanager" unique_id=251774404]
+position = Vector2(2009, 536)
+
+[node name="Marker2D4" type="Marker2D" parent="spwanmanager" unique_id=1725172393]
+position = Vector2(2634, 536)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=862308393]
 
@@ -309,10 +326,6 @@ rotation_smoothing_enabled = true
 [node name="lantern" parent="player" unique_id=4368798 instance=ExtResource("3_h2yge")]
 position = Vector2(-64.999985, 169.99998)
 scale = Vector2(0.6, 0.6)
-
-[node name="Monster" parent="." unique_id=149892754 instance=ExtResource("5_lquwl")]
-position = Vector2(618, 497.00003)
-scale = Vector2(3, 3)
 
 [node name="HPbar" parent="." unique_id=189037822 instance=ExtResource("6_7mycd")]
 
