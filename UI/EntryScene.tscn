@@ -1,10 +1,30 @@
 [gd_scene format=3 uid="uid://bd5r4gahv7fqm"]
 
+[ext_resource type="Texture2D" uid="uid://ckxla3cld6e0s" path="res://UI/ImagesForUI/EntryScene.png" id="1_xqave"]
+[ext_resource type="FontFile" uid="uid://uxkymxbkhl4i" path="res://Font/Black Blood.ttf" id="2_wysbq"]
+
 [node name="Entry" type="Control" unique_id=656277383]
 layout_mode = 3
 anchors_preset = 0
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=994052249]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1150.0
+offset_bottom = 649.0
+texture = ExtResource("1_xqave")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=569470095]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 877.0
+offset_top = 28.0
+offset_right = 1130.0
+offset_bottom = 607.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_wysbq")
+theme_override_font_sizes/font_size = 140
+text = "WAY 
+OF
+VOID"
