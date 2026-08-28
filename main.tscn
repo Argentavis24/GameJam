@@ -319,5 +319,3 @@ scale = Vector2(3, 3)
 [node name="Portal" parent="." unique_id=1606918024 instance=ExtResource("6_272bh")]
 
 [connection signal="body_entered" from="Portal" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Area2D" to="player" method="_on_area_2d_body_entered"]
