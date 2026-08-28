@@ -5,6 +5,17 @@
 [ext_resource type="FontFile" uid="uid://uxkymxbkhl4i" path="res://Font/Black Blood.ttf" id="2_b37jj"]
 [ext_resource type="FontFile" uid="uid://c0rvo5ja7c4an" path="res://Font/Black Blood.otf" id="4_t6syg"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_84tr2"]
+texture = ExtResource("1_uahxu")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y6s48"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5to0o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y8k03"]
+
 [node name="Control" type="Control" unique_id=319844130]
 layout_mode = 3
 anchors_preset = 15
@@ -14,15 +25,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8aown")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1212083150]
+[node name="TextureRect" type="Panel" parent="." unique_id=381888595]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.008
 anchor_bottom = 1.0150001
 offset_right = -0.21606445
 offset_bottom = 0.27990723
-texture = ExtResource("1_uahxu")
-expand_mode = 1
+theme_override_styles/panel = SubResource("StyleBoxTexture_84tr2")
 
 [node name="Name" type="Label" parent="." unique_id=1010138102]
 layout_mode = 1
@@ -41,32 +51,51 @@ text = "WAY OUT"
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.643
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 0.643
 offset_left = -66.5
-offset_top = 75.0
+offset_top = -17.664001
 offset_right = 66.5
-offset_bottom = 110.5
+offset_bottom = 17.835999
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Play" type="Label" parent="Menu" unique_id=726526458]
+[node name="Play" type="Button" parent="Menu" unique_id=951936801]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_b37jj")
 theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxEmpty_y6s48")
 text = "PLAY"
 
-[node name="Rules" type="Label" parent="Menu" unique_id=1722221713]
+[node name="Rules" type="Button" parent="Menu" unique_id=702434480]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_t6syg")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5to0o")
 text = "RULES"
-horizontal_alignment = 1
 
-[node name="Exit" type="Label" parent="Menu" unique_id=611244753]
+[node name="Exit" type="Button" parent="Menu" unique_id=178282907]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_b37jj")
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_y8k03")
 text = "EXIT"
-horizontal_alignment = 1
+
+[node name="Arrow" type="Label" parent="." unique_id=1241243246]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 464.0
+offset_top = -7.0
+offset_right = 503.0
+offset_bottom = 61.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_t6syg")
+theme_override_font_sizes/font_size = 45
+text = "▶"
+
+[connection signal="pressed" from="Menu/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Menu/Rules" to="." method="_on_rules_pressed"]
+[connection signal="pressed" from="Menu/Exit" to="." method="_on_exit_pressed"]
