@@ -225,7 +225,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"idle",
-"speed": 5.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -319,4 +319,5 @@ position = Vector2(6.0000014, -11.9999695)
 scale = Vector2(0.82, 0.76222223)
 sprite_frames = SubResource("SpriteFrames_lo0rj")
 animation = &"idle"
-frame_progress = 0.15239787
+autoplay = "idle"
+frame_progress = 0.73012584

@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://yn1nrilqo83i" path="res://Background/War2.png" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://d3dnwtvv726qc" path="res://player.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cnqq8a6i235ri" path="res://Scenes/lantern.tscn" id="3_h2yge"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_i5d6c"]
 a = Vector2(-320, 415)
@@ -279,3 +280,7 @@ scale = Vector2(0.2, 0.2)
 position = Vector2(376.66666, -213.33333)
 zoom = Vector2(2.5, 1.5)
 position_smoothing_enabled = true
+
+[node name="Node2D" parent="player" unique_id=4368798 instance=ExtResource("3_h2yge")]
+position = Vector2(-109.999985, 169.99998)
+scale = Vector2(0.6, 0.6)
