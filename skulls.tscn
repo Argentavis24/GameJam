@@ -119,7 +119,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_f7pux")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"skull crush",
 "speed": 10.0
 }, {
@@ -155,4 +155,3 @@ position = Vector2(-2.0000305, 3.9999542)
 scale = Vector2(15.125, 13.6875)
 sprite_frames = SubResource("SpriteFrames_lo0rj")
 animation = &"skull crush"
-frame_progress = 0.26881132

@@ -6,6 +6,7 @@ extends Area2D
 @onready var sprite = get_node_or_null("AnimatedSprite2D")
 
 func _ready() -> void:
+	add_to_group("slash")
 	visible = false
 	monitoring = false
 	z_index = 10
@@ -18,7 +19,6 @@ func play_slash() -> void:
 		sprite.frame = 0
 		sprite.play()
 
-	# Wait for physics step to detect overlaps
 	await get_tree().physics_frame
 	check_damage()
 
@@ -27,24 +27,18 @@ func play_slash() -> void:
 	monitoring = false
 
 func check_damage() -> void:
+	# Check physics bodies (Enemies)
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
 		if body == get_parent() or body.is_in_group("player"):
 			continue
-			
 		if body.has_method("take_damage"):
 			body.take_damage(damage)
 
+	# Check areas (Skulls / Destructibles)
 	var areas = get_overlapping_areas()
 	for area in areas:
-		var parent = area.get_parent()
-		if parent and parent != get_parent() and not parent.is_in_group("player"):
-			if parent.has_method("take_damage"):
-				parent.take_damage(damage)
-
-func _on_body_entered(body: Node2D) -> void:
-	if body == get_parent() or body.is_in_group("player"):
-		return
-		
-	if body.has_method("take_damage"):
-		body.take_damage(damage)
+		if area == self or area.get_parent() == get_parent():
+			continue
+		if area.has_method("take_damage"):
+			area.take_damage(damage)

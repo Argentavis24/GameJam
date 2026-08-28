@@ -103,12 +103,10 @@ func die() -> void:
 	if col:
 		col.set_deferred("disabled", true)
 
-	if sprite:
+	if sprite and sprite.sprite_frames and sprite.sprite_frames.has_animation("die"):
 		sprite.play("die")
 		await sprite.animation_finished
 	else:
 		await get_tree().create_timer(1.0).timeout
-
-	queue_free()
 
 	get_tree().change_scene_to_file("res://UI/GameOver.tscn")
