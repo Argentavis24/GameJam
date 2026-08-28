@@ -83,12 +83,13 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_y8k03")
 text = "EXIT"
 
 [node name="Arrow" type="Label" parent="." unique_id=1241243246]
-layout_mode = 0
+layout_mode = 1
 offset_right = 39.0
-offset_bottom = 68.0
+offset_bottom = 113.0
+rotation = 4.712389
 theme_override_fonts/font = ExtResource("4_t6syg")
-theme_override_font_sizes/font_size = 45
-text = "▶"
+theme_override_font_sizes/font_size = 125
+text = "†"
 
 [connection signal="pressed" from="Menu/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Menu/Rules" to="." method="_on_rules_pressed"]

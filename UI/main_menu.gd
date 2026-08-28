@@ -10,6 +10,8 @@ var arrow_base_pos: Vector2
 var hover_tween: Tween
 
 func _ready() -> void:
+	arrow.pivot_offset = arrow.size / 2  # rotate around center, not top-left
+
 	buttons = [play_button, rules_button, exit_button]
 
 	for i in buttons.size():
