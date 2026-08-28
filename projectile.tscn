@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://squ63tptayr3"]
+
+[node name="Projectile" type="Area2D" unique_id=952419646]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1067200372]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1694959371]

@@ -50,3 +50,7 @@ func spawn_enemy_at(spawn_position: Vector2) -> Node2D:
 	enemy_instance.z_index = 5
 	
 	return enemy_instance
+
+
+func _on_portal_area_entered(area: Area2D) -> void:
+	pass # Replace with function body.

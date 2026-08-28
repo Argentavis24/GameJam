@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cbcwv25c8ij2j"]
+[gd_scene format=3 uid="uid://df3ipnt3ofd4e"]
 
 [ext_resource type="Texture2D" uid="uid://upsn7yfow4wp" path="res://Background/orig_big.png" id="1_d21ai"]
 [ext_resource type="Texture2D" uid="uid://bvnixcisy6fcq" path="res://dark_castle_tileset.png" id="2_rj586"]
@@ -7,6 +7,8 @@
 [ext_resource type="FontFile" uid="uid://c0rvo5ja7c4an" path="res://Font/Black Blood.otf" id="5_hqns4"]
 [ext_resource type="PackedScene" uid="uid://opb7g3t36ue2" path="res://player.tscn" id="6_x0ka3"]
 [ext_resource type="PackedScene" uid="uid://d2h3mefcc4pts" path="res://portal.tscn" id="7_0h7mo"]
+[ext_resource type="Texture2D" uid="uid://dnmtymvkjprye" path="res://singleheart.png" id="8_7dov7"]
+[ext_resource type="Script" uid="uid://bphacup55smqw" path="res://portal2.gd" id="8_ehv2h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nr8wp"]
 size = Vector2(20, 723)
@@ -498,6 +500,16 @@ position_smoothing_speed = 10.0
 rotation_smoothing_enabled = true
 rotation_smoothing_speed = 10.0
 
-[node name="portal" parent="." unique_id=1606918024 instance=ExtResource("7_0h7mo")]
+[node name="portal2" parent="." unique_id=1606918024 instance=ExtResource("7_0h7mo")]
 position = Vector2(2286, 540)
 scale = Vector2(0.1, 0.1)
+script = ExtResource("8_ehv2h")
+
+[node name="CollisionShape2D" parent="portal2" index="1" unique_id=948056234]
+scale = Vector2(22, 22)
+
+[node name="Singleheart" type="Sprite2D" parent="." unique_id=1545858161]
+position = Vector2(-727, 125)
+texture = ExtResource("8_7dov7")
+
+[editable path="portal2"]
