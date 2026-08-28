@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d2h3mefcc4pts"]
 
 [ext_resource type="Texture2D" uid="uid://bpd5nak8un1q7" path="res://sprite-sheet.png" id="1_0r486"]
+[ext_resource type="Script" uid="uid://di03snld7ndhq" path="res://portal.gd" id="1_ef3v5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ef3v5"]
 atlas = ExtResource("1_0r486")
@@ -63,15 +64,17 @@ animations = [{
 size = Vector2(44.99997, 52.66667)
 
 [node name="Area2D" type="Area2D" unique_id=1606918024]
-scale = Vector2(3, 3)
+script = ExtResource("1_ef3v5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1208085669]
-position = Vector2(1052.6667, 159.33333)
+scale = Vector2(29.614582, 25.848959)
 sprite_frames = SubResource("SpriteFrames_8mmti")
 animation = &"void"
 autoplay = "void"
-frame_progress = 0.41626307
+frame_progress = 0.4575646
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=948056234]
-position = Vector2(1052.5, 160.33334)
 shape = SubResource("RectangleShape2D_a7ull")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
