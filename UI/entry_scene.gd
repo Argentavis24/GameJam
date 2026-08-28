@@ -12,6 +12,11 @@ func _ready() -> void:
 	tween.tween_interval(0.25)
 	tween.tween_property(label1,"modulate:a" , 1.0, 3.0)
 	
+func _to_main_menu():
+	if Input.is_action_just_pressed("StartGame"):
+		get_tree().change_scene_to_file
+		
+
 
 
 	
