@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://yn1nrilqo83i" path="res://Background/War2.png" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://k6m7ivisggfj" path="res://Scenes/player.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cnqq8a6i235ri" path="res://Scenes/lantern.tscn" id="3_h2yge"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_i5d6c"]
 a = Vector2(-320, 415)
@@ -272,12 +273,16 @@ position = Vector2(2950, 546)
 shape = SubResource("SegmentShape2D_djjbk")
 
 [node name="character" parent="." unique_id=325947527 instance=ExtResource("2_0xm2m")]
-position = Vector2(70, 536)
-scale = Vector2(0.05, 0.05)
+position = Vector2(81, 509)
+scale = Vector2(0.1, 0.1)
 
 [node name="Camera2D2" type="Camera2D" parent="character" unique_id=110136267]
-position = Vector2(2460, -2160.0002)
+position = Vector2(1240, -450.00012)
 scale = Vector2(28.485382, 79.199104)
 zoom = Vector2(3, 2)
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
+
+[node name="Node2D" parent="character" unique_id=4368798 instance=ExtResource("3_h2yge")]
+position = Vector2(-69.99999, 229.99998)
+scale = Vector2(0.6, 0.6)
