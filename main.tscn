@@ -76,6 +76,67 @@ offset_bottom = 649.0
 texture = ExtResource("1_ig7tw")
 expand_mode = 1
 
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=2137331374]
+offset_left = -1144.0
+offset_top = 1.0
+offset_right = 10.0
+offset_bottom = 650.0
+texture = ExtResource("1_ig7tw")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="." unique_id=2012813351]
+offset_left = 3456.0
+offset_top = 1.0
+offset_right = 4610.0
+offset_bottom = 650.0
+texture = ExtResource("1_ig7tw")
+expand_mode = 1
+
+[node name="TextureRect6" type="TextureRect" parent="." unique_id=213713013]
+offset_left = -9.0
+offset_top = -648.0
+offset_right = 1145.0
+offset_bottom = 1.0
+texture = ExtResource("1_ig7tw")
+expand_mode = 1
+flip_v = true
+
+[node name="TextureRect7" type="TextureRect" parent="." unique_id=342122988]
+offset_left = 2299.0
+offset_top = -635.0
+offset_right = 3453.0
+offset_bottom = 14.0
+texture = ExtResource("1_ig7tw")
+expand_mode = 1
+flip_v = true
+
+[node name="TextureRect9" type="TextureRect" parent="." unique_id=1895321275]
+offset_left = -1135.0
+offset_top = -644.0
+offset_right = 19.0
+offset_bottom = 5.0
+texture = ExtResource("1_ig7tw")
+expand_mode = 1
+flip_v = true
+
+[node name="TextureRect10" type="TextureRect" parent="." unique_id=1416175861]
+offset_left = 3438.0
+offset_top = -657.0
+offset_right = 4592.0
+offset_bottom = -8.0
+texture = ExtResource("1_ig7tw")
+expand_mode = 1
+flip_v = true
+
+[node name="TextureRect8" type="TextureRect" parent="." unique_id=1509221515]
+offset_left = 1143.0
+offset_top = -635.0
+offset_right = 2297.0
+offset_bottom = 14.0
+texture = ExtResource("1_ig7tw")
+expand_mode = 1
+flip_v = true
+
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=1313640400]
 offset_left = 1154.0
 offset_top = 1.0
@@ -317,7 +378,7 @@ scale = Vector2(0.2, 0.2)
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=1502977696]
 position = Vector2(924.9999, -604.9999)
 scale = Vector2(0.99999994, 0.99999994)
-zoom = Vector2(2.5, 1.5)
+zoom = Vector2(1.5, 1.5)
 limit_smoothed = true
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
