@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://1urjaq28nq0i"]
 
+[ext_resource type="Script" uid="uid://v1scilwjer8f" path="res://main.gd" id="1_7mycd"]
 [ext_resource type="Texture2D" uid="uid://yn1nrilqo83i" path="res://Background/War2.png" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://opb7g3t36ue2" path="res://player.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://cnqq8a6i235ri" path="res://Scenes/lantern.tscn" id="3_h2yge"]
@@ -67,6 +68,7 @@ size = Vector2(31, 653)
 size = Vector2(3462, 77.5)
 
 [node name="Node2D" type="Node2D" unique_id=2080322140]
+script = ExtResource("1_7mycd")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1472279906]
 offset_left = 10.0
