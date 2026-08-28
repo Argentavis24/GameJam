@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b3t6nydew3d80" path="res://Scenes/MovingPlatform.tscn" id="4_1y8me"]
 [ext_resource type="PackedScene" uid="uid://opb7g3t36ue2" path="res://player.tscn" id="4_n7ypv"]
 [ext_resource type="FontFile" uid="uid://c0rvo5ja7c4an" path="res://Font/Black Blood.otf" id="5_0s5r2"]
+[ext_resource type="PackedScene" uid="uid://d2h3mefcc4pts" path="res://portal.tscn" id="7_7j8ne"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8mmti"]
 size = Vector2(20, 723)
@@ -496,3 +497,7 @@ position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 rotation_smoothing_enabled = true
 rotation_smoothing_speed = 10.0
+
+[node name="Area2D" parent="." unique_id=1606918024 instance=ExtResource("7_7j8ne")]
+position = Vector2(2286, 540)
+scale = Vector2(0.1, 0.1)
