@@ -76,7 +76,7 @@ func play_hurt_animation() -> void:
 		await get_tree().create_timer(0.4).timeout
 	is_hurt = false
 
-func die() -> void:
+func hurt() -> void:
 	is_hurt = true
 	if sprite:
 		sprite.play("die")
