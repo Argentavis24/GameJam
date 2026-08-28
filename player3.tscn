@@ -1,16 +1,29 @@
 [gd_scene format=3 uid="uid://cpdnrm7leyjqt"]
 
-[ext_resource type="Script" uid="uid://cufpbnwtncspl" path="res://player3.gd" id="1_eg78s"]
+[ext_resource type="Script" uid="uid://b4abj7fg0duvf" path="res://level3/player.gd" id="1_xj4aa"]
+[ext_resource type="Texture2D" uid="uid://c2rf0pyiuv4p8" path="res://player assets/Idle/0_Dark_Oracle_Idle_000.png" id="2_xj4aa"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8mmti"]
+radius = 37.0
+height = 118.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6xxrv"]
+size = Vector2(90, 117)
 
 [node name="Player" type="CharacterBody2D" unique_id=1084967254]
-script = ExtResource("1_eg78s")
+script = ExtResource("1_xj4aa")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1013697392]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_xj4aa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=46887548]
+shape = SubResource("CapsuleShape2D_8mmti")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2063919219]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1180960685]
+position = Vector2(12, 0.5)
+shape = SubResource("RectangleShape2D_6xxrv")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=837938655]
