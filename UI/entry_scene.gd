@@ -31,7 +31,7 @@ func start_attention_pulse() -> void:
 func _process(delta: float) -> void:
 	if animation_done and Input.is_action_just_pressed("StartGame"):
 		get_tree().change_scene_to_file('res://UI/MainMenu.tscn')
-		
+
 
 
 

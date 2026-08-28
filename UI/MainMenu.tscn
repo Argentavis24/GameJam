@@ -15,48 +15,58 @@ grow_vertical = 2
 script = ExtResource("1_8aown")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1212083150]
-layout_mode = 0
-offset_right = 1161.0
-offset_bottom = 658.0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.008
+anchor_bottom = 1.0150001
+offset_right = -0.21606445
+offset_bottom = 0.27990723
 texture = ExtResource("1_uahxu")
 expand_mode = 1
 
 [node name="Name" type="Label" parent="." unique_id=1010138102]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.75500005
+anchor_bottom = 0.51100004
 offset_left = 293.0
 offset_top = 93.0
-offset_right = 870.0
-offset_bottom = 331.0
+offset_right = 0.2399292
+offset_bottom = -0.12802124
 theme_override_fonts/font = ExtResource("2_b37jj")
 theme_override_font_sizes/font_size = 175
 text = "WAY OUT"
 
-[node name="Play" type="Label" parent="." unique_id=535633802]
-layout_mode = 0
-offset_left = 499.0
-offset_top = 307.0
-offset_right = 632.0
-offset_bottom = 410.0
+[node name="Menu" type="VBoxContainer" parent="." unique_id=779393266]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.5
+offset_top = 75.0
+offset_right = 66.5
+offset_bottom = 110.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" type="Label" parent="Menu" unique_id=726526458]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("2_b37jj")
 theme_override_font_sizes/font_size = 75
 text = "PLAY"
 
-[node name="Exit" type="Label" parent="." unique_id=1202838984]
-layout_mode = 0
-offset_left = 542.0
-offset_top = 463.0
-offset_right = 589.0
-offset_bottom = 505.0
-theme_override_fonts/font = ExtResource("2_b37jj")
-theme_override_font_sizes/font_size = 30
-text = "EXIT"
-
-[node name="Rules" type="Label" parent="." unique_id=2012606689]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 395.0
-offset_right = 624.0
-offset_bottom = 463.0
+[node name="Rules" type="Label" parent="Menu" unique_id=1722221713]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("4_t6syg")
 theme_override_font_sizes/font_size = 50
 text = "RULES"
+horizontal_alignment = 1
+
+[node name="Exit" type="Label" parent="Menu" unique_id=611244753]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_b37jj")
+theme_override_font_sizes/font_size = 30
+text = "EXIT"
+horizontal_alignment = 1
