@@ -35,10 +35,10 @@ text = "WAY  OUT"
 
 [node name="Start" type="Label" parent="." unique_id=1204748340]
 layout_mode = 0
-offset_left = 403.0
-offset_top = 465.0
-offset_right = 803.0
-offset_bottom = 548.0
+offset_left = 427.0
+offset_top = 464.0
+offset_right = 760.0
+offset_bottom = 532.0
 theme_override_fonts/font = ExtResource("2_wysbq")
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 50
 text = "Press Space To Begin"
