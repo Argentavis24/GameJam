@@ -1,0 +1,168 @@
+[gd_scene format=3 uid="uid://cnqq8a6i235ri"]
+
+[ext_resource type="Texture2D" uid="uid://08612h28404y" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_023.png" id="1_fxcm8"]
+[ext_resource type="Texture2D" uid="uid://c75ywg00hdt5p" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_029.png" id="2_6qnxg"]
+[ext_resource type="Texture2D" uid="uid://bglvrolfi73r1" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_030.png" id="3_tkq0u"]
+[ext_resource type="Texture2D" uid="uid://dd0ljcb0in1ap" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_031.png" id="4_j1t3k"]
+[ext_resource type="Texture2D" uid="uid://csbofpcbsuggu" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_032.png" id="5_kxj81"]
+[ext_resource type="Texture2D" uid="uid://ci0ckrly53w0t" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_033.png" id="6_8i3cw"]
+[ext_resource type="Texture2D" uid="uid://be1oy3fl74mhi" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_034.png" id="7_i7aag"]
+[ext_resource type="Texture2D" uid="uid://b5bbtyxes2lj" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_035.png" id="8_0cblv"]
+[ext_resource type="Texture2D" uid="uid://dar6gbqwdhpvg" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_036.png" id="9_ps578"]
+[ext_resource type="Texture2D" uid="uid://bq27ah3eyqxvn" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_037.png" id="10_ca4bf"]
+[ext_resource type="Texture2D" uid="uid://bxlf8hqf0w3fp" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_007.png" id="11_37x71"]
+[ext_resource type="Texture2D" uid="uid://bgc76esiiw0p" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_008.png" id="12_vko24"]
+[ext_resource type="Texture2D" uid="uid://cmogtkvv5sxr7" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_009.png" id="13_0et2h"]
+[ext_resource type="Texture2D" uid="uid://ct46mwsevabhq" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_010.png" id="14_r264k"]
+[ext_resource type="Texture2D" uid="uid://cw5it4txv6yb4" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_011.png" id="15_nt7ps"]
+[ext_resource type="Texture2D" uid="uid://cql2gd0dje54q" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_012.png" id="16_rmuyi"]
+[ext_resource type="Texture2D" uid="uid://cmy1q7dbpxq6c" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_013.png" id="17_yktlj"]
+[ext_resource type="Texture2D" uid="uid://dkfh4iw4ilyb3" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_014.png" id="18_tmcxt"]
+[ext_resource type="Texture2D" uid="uid://dsf7q238wu6ul" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_015.png" id="19_tnnyb"]
+[ext_resource type="Texture2D" uid="uid://c7mch1o8ljgkw" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_016.png" id="20_v7y6i"]
+[ext_resource type="Texture2D" uid="uid://hlxpuoy6wrkw" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_017.png" id="21_8llcg"]
+[ext_resource type="Texture2D" uid="uid://jwyqxbsjgjn0" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_018.png" id="22_5rtst"]
+[ext_resource type="Texture2D" uid="uid://dhdklmumkj4em" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_019.png" id="23_5xlra"]
+[ext_resource type="Texture2D" uid="uid://cp26lveb4r86r" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_020.png" id="24_n5h1o"]
+[ext_resource type="Texture2D" uid="uid://irt3nfifvxmf" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_021.png" id="25_3l4jq"]
+[ext_resource type="Texture2D" uid="uid://j8sfeelbpv12" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_022.png" id="26_ar0sb"]
+[ext_resource type="Texture2D" uid="uid://b6lfysoebgoil" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_000.png" id="27_t48m3"]
+[ext_resource type="Texture2D" uid="uid://djgtr7ntj2wko" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_001.png" id="28_frl0l"]
+[ext_resource type="Texture2D" uid="uid://bq8r60bvm314r" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_002.png" id="29_bo7tc"]
+[ext_resource type="Texture2D" uid="uid://rs5ttchyo03j" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_003.png" id="30_bmsar"]
+[ext_resource type="Texture2D" uid="uid://rycikhhw0raw" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_004.png" id="31_oaany"]
+[ext_resource type="Texture2D" uid="uid://s8fj6nsara6" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_005.png" id="32_lpvg5"]
+[ext_resource type="Texture2D" uid="uid://ds0geamr3ucsy" path="res://lantern/Orange Light/Lantern 3 - Silver and Orange_006.png" id="33_rotb5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mw2tn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fxcm8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6qnxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tkq0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_j1t3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kxj81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8i3cw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_i7aag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0cblv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ps578")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ca4bf")
+}],
+"loop": 1,
+"name": &"lantern die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_37x71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_vko24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_0et2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_r264k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_nt7ps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_rmuyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_yktlj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_tmcxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_tnnyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_v7y6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_8llcg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_5rtst")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_5xlra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_n5h1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_3l4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ar0sb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_fxcm8")
+}],
+"loop": 1,
+"name": &"lantern idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_t48m3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_frl0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_bo7tc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_bmsar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_oaany")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_lpvg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_rotb5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_37x71")
+}],
+"loop": 1,
+"name": &"lantern start",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=4368798]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1522969713]
+texture_filter = 1
+position = Vector2(71, 91.25)
+scale = Vector2(5.4375, 4.5784316)
+sprite_frames = SubResource("SpriteFrames_mw2tn")
+animation = &"lantern die"
+frame_progress = 0.79481107
