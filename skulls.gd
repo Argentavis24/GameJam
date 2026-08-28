@@ -6,12 +6,13 @@ extends Area2D
 var is_crushed: bool = false
 
 func _ready() -> void:
-	# Start in idle animation
+	add_to_group("destructibles")
+	
 	if sprite:
 		sprite.play("skull idle")
 
-# Called when the player's slash area hits this skull
-func take_damage(amount: int = 0) -> void:
+# Called only when slash.gd explicitly hits the skull
+func take_damage(_amount: int = 0) -> void:
 	crush()
 
 func crush() -> void:
@@ -20,17 +21,13 @@ func crush() -> void:
 		
 	is_crushed = true
 	
-	# Disable collision so it cannot be hit multiple times
 	if collision:
 		collision.set_deferred("disabled", true)
 		
-	if sprite:
+	if sprite and sprite.sprite_frames and sprite.sprite_frames.has_animation("skull crush"):
 		sprite.play("skull crush")
 		await sprite.animation_finished
+	else:
+		await get_tree().create_timer(0.2).timeout
 		
 	queue_free()
-
-func _on_area_entered(area: Area2D) -> void:
-	# If hit by the player's slash area directly
-	if area.name.to_lower().contains("slash") or area.get_parent().is_in_group("player"):
-		crush()
