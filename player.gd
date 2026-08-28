@@ -76,7 +76,9 @@ func _physics_process(delta: float) -> void:
 	was_f_pressed = f_pressed_now
 
 	# Check for attack inputs without adding movement
-	var attack_pressed: bool = Input.is_action_just_pressed("attack") or Input.is_action_just_pressed("slash") or f_just_pressed
+	var attack_pressed: bool = Input.is_action_just_pressed("attack") \
+		or (InputMap.has_action("slash") and Input.is_action_just_pressed("slash")) \
+		or f_just_pressed
 	if attack_pressed and can_attack and not is_hurt:
 		attack()
 
