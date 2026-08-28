@@ -93,4 +93,6 @@ text = "†"
 
 [connection signal="pressed" from="Menu/Question" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Menu/NO" to="." method="_on_rules_pressed"]
+[connection signal="pressed" from="Menu/NO" to="." method="_on_no_pressed"]
 [connection signal="pressed" from="Menu/YES" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Menu/YES" to="." method="_on_yes_pressed"]
