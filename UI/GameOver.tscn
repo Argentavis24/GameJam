@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://dpdmpe04e0i0t"]
+
+[ext_resource type="Script" uid="uid://c4o6naytxex0h" path="res://UI/game_over.gd" id="1_3pwoa"]
+[ext_resource type="Texture2D" uid="uid://bsj755t8x6y3l" path="res://UI/ImagesForUI/main_menu_glimmer_of_hope.png" id="2_dy830"]
+[ext_resource type="FontFile" uid="uid://uxkymxbkhl4i" path="res://Font/Black Blood.ttf" id="3_i0dbh"]
+[ext_resource type="FontFile" uid="uid://c0rvo5ja7c4an" path="res://Font/Black Blood.otf" id="4_icvhn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_84tr2"]
+texture = ExtResource("2_dy830")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y6s48"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5to0o"]
+
+[node name="Control" type="Control" unique_id=319844130]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3pwoa")
+
+[node name="TextureRect" type="Panel" parent="." unique_id=381888595]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.008
+anchor_bottom = 1.0150001
+offset_right = -0.21606445
+offset_bottom = 0.27990723
+theme_override_styles/panel = SubResource("StyleBoxTexture_84tr2")
+
+[node name="GameOver" type="Label" parent="." unique_id=1010138102]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.75500005
+anchor_bottom = 0.51100004
+offset_left = 242.0
+offset_top = 148.0
+offset_right = 60.23993
+offset_bottom = 54.87198
+theme_override_fonts/font = ExtResource("3_i0dbh")
+theme_override_font_sizes/font_size = 175
+text = "GAME OVER"
+
+[node name="Menu" type="VBoxContainer" parent="." unique_id=779393266]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -151.914
+offset_top = 130.0
+offset_right = 151.914
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Retry" type="Button" parent="Menu" unique_id=951936801]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_i0dbh")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_y6s48")
+text = "RETRY"
+
+[node name="Menu" type="Button" parent="Menu" unique_id=702434480]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_icvhn")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5to0o")
+text = "MAIN MENU"
+
+[node name="Arrow" type="Label" parent="." unique_id=1241243246]
+layout_mode = 1
+offset_right = 39.0
+offset_bottom = 113.0
+rotation = 4.712389
+theme_override_fonts/font = ExtResource("4_icvhn")
+theme_override_font_sizes/font_size = 125
+text = "†"
+
+[connection signal="pressed" from="Menu/Retry" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Menu/Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="Menu/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Menu/Menu" to="." method="_on_rules_pressed"]
+[connection signal="pressed" from="Menu/Menu" to="." method="_on_no_pressed"]
