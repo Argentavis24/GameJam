@@ -70,7 +70,8 @@
 [ext_resource type="Texture2D" uid="uid://cyitvftndiywh" path="res://player assets/Walking/0_Dark_Oracle_Walking_021.png" id="67_dkvgp"]
 [ext_resource type="Texture2D" uid="uid://blhysso3lf1u" path="res://player assets/Walking/0_Dark_Oracle_Walking_022.png" id="68_siwmy"]
 [ext_resource type="Texture2D" uid="uid://bpvp324mjd1en" path="res://player assets/Walking/0_Dark_Oracle_Walking_023.png" id="69_djlqh"]
-[ext_resource type="PackedScene" uid="uid://db7km0l4xkkfv" path="res://Scenes/slash.tscn" id="71_fkf2u"]
+[ext_resource type="PackedScene" uid="uid://c1yenu1jj41mo" path="res://hpbar.tscn" id="71_fkf2u"]
+[ext_resource type="PackedScene" uid="uid://db7km0l4xkkfv" path="res://Scenes/slash.tscn" id="72_db7k"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_doy3c"]
 radius = 125.0
@@ -319,8 +320,12 @@ shape = SubResource("CapsuleShape2D_doy3c")
 position = Vector2(6.0000014, -11.9999695)
 scale = Vector2(0.82, 0.76222223)
 sprite_frames = SubResource("SpriteFrames_lo0rj")
-animation = &"walk"
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.8972886
 
-[node name="slash" parent="." unique_id=1498497371 instance=ExtResource("71_fkf2u")]
+[node name="HPbar" parent="." unique_id=189037822 instance=ExtResource("71_fkf2u")]
+
+[node name="slash" parent="." unique_id=1498497371 instance=ExtResource("72_db7k")]
 position = Vector2(6.0000014, -11.9999695)
 scale = Vector2(0.82, 0.76222223)
