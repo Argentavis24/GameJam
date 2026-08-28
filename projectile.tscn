@@ -1,7 +1,21 @@
 [gd_scene format=3 uid="uid://squ63tptayr3"]
 
+[ext_resource type="Script" uid="uid://bue6macjw45gy" path="res://projectile.gd" id="1_qxf0c"]
+[ext_resource type="Texture2D" uid="uid://h0kdptcb35ws" path="res://Icons_Fire Arrow.png" id="2_dgwo2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a7ull"]
+radius = 156.0
+height = 508.0
+
 [node name="Projectile" type="Area2D" unique_id=952419646]
+script = ExtResource("1_qxf0c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=842199420]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CapsuleShape2D_a7ull")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1067200372]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_dgwo2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1694959371]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
