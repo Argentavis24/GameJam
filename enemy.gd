@@ -113,6 +113,7 @@ func take_damage(amount: int) -> void:
 	if health <= 0:
 		die()
 
+signal died
 func die() -> void:
 	current_state = State.DEAD
 	queue_free()
