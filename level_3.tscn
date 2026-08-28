@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c60fg166q7ddj"]
 
-[ext_resource type="Texture2D" uid="uid://5y740e5ewdjg" path="res://ICON.png" id="1_ayd5w"]
+[ext_resource type="Texture2D" uid="uid://dlb7gsjlcqucb" path="res://background 3.png" id="1_j8bo8"]
 [ext_resource type="PackedScene" uid="uid://cpdnrm7leyjqt" path="res://player3.tscn" id="2_16pka"]
 [ext_resource type="PackedScene" uid="uid://squ63tptayr3" path="res://projectile.tscn" id="3_j8bo8"]
 [ext_resource type="PackedScene" uid="uid://bwrfl6tpmffkh" path="res://boss.tscn" id="4_j8bo8"]
@@ -8,14 +8,16 @@
 [node name="Level_3" type="Node2D" unique_id=1759323487]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1344269764]
-offset_right = 1215.0
-offset_bottom = 1024.0
-texture = ExtResource("1_ayd5w")
-expand_mode = 1
+offset_right = 1200.0
+offset_bottom = 720.0
+texture = ExtResource("1_j8bo8")
 
 [node name="Player" parent="." unique_id=1084967254 instance=ExtResource("2_16pka")]
+position = Vector2(78, 535)
 script = null
 
 [node name="Projectile" parent="." unique_id=952419646 instance=ExtResource("3_j8bo8")]
+position = Vector2(751, 352)
 
 [node name="Boss" parent="." unique_id=1394216470 instance=ExtResource("4_j8bo8")]
+position = Vector2(388, 221)
