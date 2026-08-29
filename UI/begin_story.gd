@@ -3,6 +3,7 @@ extends Control
 @onready var heading: Label = $TextureRect/Heading
 @onready var content: Label = $Content  # confirm this path matches your actual tree
 @onready var continue_label: Label = $Ins
+@onready var astra_sfx: AudioStreamPlayer2D = $astra_vc
 
 var can_continue := false
 
@@ -28,4 +29,6 @@ func start_continue_float() -> void:
 
 func _process(_delta: float) -> void:
 	if can_continue and Input.is_action_just_pressed("ui_accept"):
-		get_tree().change_scene_to_file('res://UI/Scene1BeginStry.tscn')  # set your actual next scene path
+		astra_sfx.play()
+		get_tree().change_scene_to_file('res://UI/Scene1BeginStry.tscn')
+		 # set your actual next scene path
