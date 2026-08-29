@@ -80,7 +80,7 @@ size = Vector2(95, 61.5)
 
 [node name="Projectile" type="Area2D" unique_id=952419646]
 script = ExtResource("1_qxf0c")
-speed = 600.0
+speed = 450.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2031360912]
 scale = Vector2(4, 4.518)
