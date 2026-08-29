@@ -81,6 +81,12 @@
 [ext_resource type="Texture2D" uid="uid://blhysso3lf1u" path="res://player assets/Walking/0_Dark_Oracle_Walking_022.png" id="68_siwmy"]
 [ext_resource type="Texture2D" uid="uid://bpvp324mjd1en" path="res://player assets/Walking/0_Dark_Oracle_Walking_023.png" id="69_djlqh"]
 [ext_resource type="PackedScene" uid="uid://db7km0l4xkkfv" path="res://Scenes/slash.tscn" id="72_db7k"]
+[ext_resource type="AudioStream" uid="uid://5qu25fwcyrwx" path="res://Audio/jump_square.wav" id="82_vihdy"]
+[ext_resource type="AudioStream" uid="uid://b0ycse67xc0dm" path="res://Audio/walk.wav" id="83_c0yt3"]
+[ext_resource type="AudioStream" uid="uid://damyds08nk131" path="res://Audio/heal.wav" id="84_uckl6"]
+[ext_resource type="AudioStream" uid="uid://bkkpbra8p1k5b" path="res://Audio/slash.wav" id="85_5ihbc"]
+[ext_resource type="AudioStream" uid="uid://exsvrnuubce6" path="res://Audio/lose.wav" id="86_sc53x"]
+[ext_resource type="AudioStream" uid="uid://dgmxeja8soqk3" path="res://Audio/hurt.wav" id="87_ro7of"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_doy3c"]
 radius = 125.0
@@ -370,3 +376,27 @@ frame = 10
 frame_progress = 1.0
 
 [node name="slash" parent="." unique_id=1498497371 instance=ExtResource("72_db7k")]
+
+[node name="jump_sfx" type="AudioStreamPlayer2D" parent="." unique_id=1109268936]
+stream = ExtResource("82_vihdy")
+volume_db = -16.0
+
+[node name="walk_sfx" type="AudioStreamPlayer2D" parent="." unique_id=1340642426]
+stream = ExtResource("83_c0yt3")
+volume_db = -30.0
+
+[node name="heal_sfx" type="AudioStreamPlayer2D" parent="." unique_id=1588266615]
+stream = ExtResource("84_uckl6")
+volume_db = -16.0
+
+[node name="slash_sfx" type="AudioStreamPlayer2D" parent="." unique_id=301295813]
+stream = ExtResource("85_5ihbc")
+volume_db = -16.0
+
+[node name="lose_sfx" type="AudioStreamPlayer2D" parent="." unique_id=746790925]
+stream = ExtResource("86_sc53x")
+volume_db = -16.0
+
+[node name="hurt_sfx" type="AudioStreamPlayer2D" parent="." unique_id=1301346609]
+stream = ExtResource("87_ro7of")
+volume_db = -16.0
