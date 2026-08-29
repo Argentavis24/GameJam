@@ -6,7 +6,7 @@
 [ext_resource type="FontFile" uid="uid://c0rvo5ja7c4an" path="res://Font/Black Blood.otf" id="4_aqpnk"]
 [ext_resource type="AudioStream" uid="uid://n1rialr8chrg" path="res://UI/astra_sfx.mp3" id="5_lqhro"]
 
-[node name="Instructions" type="Control" unique_id=958154108]
+[node name="Story" type="Control" unique_id=958154108]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
