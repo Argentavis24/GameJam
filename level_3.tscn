@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bwrfl6tpmffkh" path="res://level3/boss.tscn" id="4_j8bo8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8mmti"]
-size = Vector2(1203, 77.5)
+size = Vector2(1259, 77.5)
 
 [node name="Level_3" type="Node2D" unique_id=1759323487]
 
@@ -14,10 +14,6 @@ size = Vector2(1203, 77.5)
 offset_right = 1200.0
 offset_bottom = 720.0
 texture = ExtResource("1_j8bo8")
-
-[node name="Player" parent="." unique_id=1084967254 instance=ExtResource("2_16pka")]
-position = Vector2(78, 535)
-script = null
 
 [node name="Projectile" parent="." unique_id=952419646 instance=ExtResource("3_j8bo8")]
 position = Vector2(-2, 0)
@@ -28,5 +24,8 @@ position = Vector2(745, 501)
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=627711798]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=2140241365]
-position = Vector2(597.5, 685.25)
+position = Vector2(569.5, 685.25)
 shape = SubResource("RectangleShape2D_8mmti")
+
+[node name="Player2" parent="." unique_id=1084967254 instance=ExtResource("2_16pka")]
+position = Vector2(136, 490)
