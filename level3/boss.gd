@@ -179,6 +179,8 @@ func take_damage(amount: int) -> void:
 
 	if health <= 0:
 		die()
+		await get_tree().create_timer(1.5).timeout
+		get_tree().change_scene_to_file('res://UI/FinalStry.tscn')
 	else:
 		if current_state == State.PASSIVE:
 			current_state = State.CHASE

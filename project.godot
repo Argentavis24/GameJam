@@ -18,6 +18,10 @@ boot_splash/show_image=false
 boot_splash/stretch_mode=0
 config/icon="uid://5y740e5ewdjg"
 
+[autoload]
+
+Bgm="*uid://dw7ce5hhh36t"
+
 [display]
 
 window/size/viewport_width=1200
