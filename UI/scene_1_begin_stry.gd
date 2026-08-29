@@ -4,6 +4,7 @@ extends Control
 @onready var content: Label = $Content  # confirm this path matches your actual tree
 @onready var continue_label: Label = $Ins
 
+
 var can_continue := false
 
 func _ready() -> void:
@@ -28,4 +29,5 @@ func start_continue_float() -> void:
 
 func _process(_delta: float) -> void:
 	if can_continue and Input.is_action_just_pressed("ui_accept"):
-		get_tree().change_scene_to_file('res://main.tscn')  # set your actual next scene path
+		get_tree().change_scene_to_file('res://main.tscn')
+# set your actual next scene path

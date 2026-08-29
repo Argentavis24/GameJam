@@ -76,3 +76,5 @@ this lantern shall guide you...
 Astra: Huh......???
 
 "
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=434651951]
