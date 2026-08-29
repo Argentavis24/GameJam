@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cpdnrm7leyjqt"]
 
-[ext_resource type="Script" uid="uid://b4abj7fg0duvf" path="res://level3/player.gd" id="1_xj4aa"]
+[ext_resource type="Script" uid="uid://cufpbnwtncspl" path="res://level3/player.gd" id="1_eg78s"]
 [ext_resource type="Texture2D" uid="uid://c2rf0pyiuv4p8" path="res://player assets/Idle/0_Dark_Oracle_Idle_000.png" id="2_xj4aa"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8mmti"]
@@ -11,7 +11,7 @@ height = 118.0
 size = Vector2(90, 117)
 
 [node name="Player" type="CharacterBody2D" unique_id=1084967254]
-script = ExtResource("1_xj4aa")
+script = ExtResource("1_eg78s")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1013697392]
 scale = Vector2(0.2, 0.2)
