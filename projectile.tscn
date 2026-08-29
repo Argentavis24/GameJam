@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://squ63tptayr3"]
 
-[ext_resource type="Script" uid="uid://bue6macjw45gy" path="res://level3/projectile.gd" id="1_qxf0c"]
+[ext_resource type="Script" uid="uid://bue6macjw45gy" path="res://projectile.gd" id="1_qxf0c"]
 [ext_resource type="Texture2D" uid="uid://h0kdptcb35ws" path="res://Icons_Fire Arrow.png" id="2_dgwo2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a7ull"]

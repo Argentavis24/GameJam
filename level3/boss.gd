@@ -6,24 +6,26 @@ enum State {
 	HEAL
 }
 
-var state = State.IDLE
+var state := State.IDLE
 
-var health = 100
-var max_health = 100
+# Health
+@export var max_health := 100
+var health := max_health
 
-var melee_damage = 10
-var ranged_damage =5
-var has_healed = false
-var can_attack = true
+# Attacks
+@export var melee_damage := 10
+@export var ranged_damage := 5
+
+# Boss settings
+@export var attack_cooldown := 1.5
+@export var melee_range := 80.0
+@export var heal_amount := 20
 
 var player = null
+var can_attack := true
+var has_healed := false
 
-var projectile = preload("res://projectile.tscn")
 
-
-func _ready():
-	player = get_tree().get_first_node_in_group("player")
-	
 func _physics_process(delta):
 	match state:
 		State.IDLE:
@@ -36,59 +38,76 @@ func _physics_process(delta):
 			heal_state()
 
 
+func find_player():
+	player = get_tree().get_first_node_in_group("player")
+
+
 func idle_state():
-	if player != null and can_attack:
+	if player == null:
+		find_player()
+		return
+
+	# Heal at 30% HP
+	if health <= max_health * 0.3 and not has_healed:
+		state = State.HEAL
+		return
+
+	# Attack
+	if can_attack:
 		state = State.ATTACK
 
 
 func attack_state():
-	if not can_attack:
+	if player == null:
 		state = State.IDLE
 		return
 
 	can_attack = false
 
-	# Randomly choose melee or ranged attack
-	var attack = randi_range(0, 1)
+	# 50/50 melee or ranged
+	var attack_choice := randi_range(0, 1)
 
-	if attack == 0:
+	if attack_choice == 0:
 		melee_attack()
 	else:
 		ranged_attack()
 
-	await get_tree().create_timer(1.5).timeout
+	# Attack cooldown
+	await get_tree().create_timer(attack_cooldown).timeout
 
 	can_attack = true
-
-	# Heal if boss is low on health
-	if health <= max_health * 0.3 and not has_healed:
-		state = State.HEAL
-	else:
-		state = State.IDLE
+	state = State.IDLE
 
 
 func melee_attack():
-	if player != null:
-		var distance = global_position.distance_to(player.global_position)
+	if player == null:
+		return
 
-		if distance < 80:
-			player.take_damage(melee_damage)
+	var distance := global_position.distance_to(player.global_position)
+
+	if distance <= melee_range:
+		player.take_damage(melee_damage)
+
+	print("Boss used melee!")
 
 
 func ranged_attack():
 	if player == null:
 		return
 
-	var new_projectile = projectile.instantiate()
+	var projectile_scene = preload("res://projectile.tscn")
+	var projectile = projectile_scene.instantiate()
 
-	new_projectile.global_position = $RangedSpawn.global_position
+	projectile.global_position = $RangedSpawn.global_position
 
-	get_tree().current_scene.add_child(new_projectile)
+	var direction = sign(player.global_position.x - global_position.x)
 
-	# Tell projectile which direction to travel
-	new_projectile.direction = sign(
-		player.global_position.x - global_position.x
-	)
+	projectile.direction = direction
+	projectile.damage = ranged_damage
+
+	get_tree().current_scene.add_child(projectile)
+
+	print("Boss used ranged attack!")
 
 
 func take_damage(amount):
@@ -100,13 +119,13 @@ func take_damage(amount):
 		die()
 		return
 
-	# Heal when below 30% health
+	# Heal once when below 30%
 	if health <= max_health * 0.3 and not has_healed:
 		state = State.HEAL
 
 
 func heal_state():
-	health += 20
+	health += heal_amount
 
 	if health > max_health:
 		health = max_health
