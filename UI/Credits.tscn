@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://nx4dyv6l2hrb" path="res://UI/ImagesForUI/parchement.png" id="3_petif"]
 [ext_resource type="FontFile" uid="uid://c0rvo5ja7c4an" path="res://Font/Black Blood.otf" id="4_ek0d3"]
 
-[node name="Instructions" type="Control" unique_id=958154108]
+[node name="Credits" type="Control" unique_id=958154108]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
