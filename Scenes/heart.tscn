@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://blc0jfnteyqqf"]
 
-[ext_resource type="Texture2D" uid="uid://dnmtymvkjprye" path="res://singleheart.png" id="1_cixvg"]
+[ext_resource type="Texture2D" uid="uid://dnmtymvkjprye" path="res://Background/singleheart.png" id="1_cixvg"]
 
 [node name="Heart" type="TextureRect" unique_id=2007240071]
 custom_minimum_size = Vector2(32, 326)
