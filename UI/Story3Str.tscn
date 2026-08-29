@@ -1,18 +1,18 @@
-[gd_scene format=3 uid="uid://rwjv3jqm32rk"]
+[gd_scene format=3 uid="uid://cba805x2y4j2u"]
 
-[ext_resource type="Script" uid="uid://cj44ba2y5s3vs" path="res://UI/story_lvl_2.gd" id="1_8jx6q"]
-[ext_resource type="Texture2D" uid="uid://bsj755t8x6y3l" path="res://UI/ImagesForUI/main_menu_glimmer_of_hope.png" id="2_0fwaq"]
-[ext_resource type="Texture2D" uid="uid://nx4dyv6l2hrb" path="res://UI/ImagesForUI/parchement.png" id="3_ki30l"]
-[ext_resource type="FontFile" uid="uid://c0rvo5ja7c4an" path="res://Font/Black Blood.otf" id="4_bw782"]
+[ext_resource type="Script" uid="uid://tq34gdxomhhd" path="res://UI/story_3_str.gd" id="1_ftpaf"]
+[ext_resource type="Texture2D" uid="uid://bsj755t8x6y3l" path="res://UI/ImagesForUI/main_menu_glimmer_of_hope.png" id="2_mb5q6"]
+[ext_resource type="Texture2D" uid="uid://nx4dyv6l2hrb" path="res://UI/ImagesForUI/parchement.png" id="3_0u3a8"]
+[ext_resource type="FontFile" uid="uid://c0rvo5ja7c4an" path="res://Font/Black Blood.otf" id="4_xx74o"]
 
-[node name="Instructions" type="Control" unique_id=958154108]
+[node name="Instructions2" type="Control" unique_id=958154108]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_8jx6q")
+script = ExtResource("1_ftpaf")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2002980436]
 layout_mode = 1
@@ -21,7 +21,7 @@ anchor_right = 1.01
 anchor_bottom = 1.026
 offset_right = 0.47998047
 offset_bottom = 0.15197754
-texture = ExtResource("2_0fwaq")
+texture = ExtResource("2_mb5q6")
 expand_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="TextureRect" unique_id=1583289411]
@@ -34,7 +34,7 @@ offset_top = -136.0
 offset_right = 512.76
 offset_bottom = 796.0
 grow_horizontal = 2
-texture = ExtResource("3_ki30l")
+texture = ExtResource("3_0u3a8")
 
 [node name="Heading" type="Label" parent="TextureRect" unique_id=1556850553]
 layout_mode = 0
@@ -43,7 +43,7 @@ offset_top = 58.0
 offset_right = 718.0
 offset_bottom = 161.0
 theme_override_colors/font_color = Color(0.00030873288, 0.0024294415, 0.15285732, 1)
-theme_override_fonts/font = ExtResource("4_bw782")
+theme_override_fonts/font = ExtResource("4_xx74o")
 theme_override_font_sizes/font_size = 75
 text = "STORY"
 
@@ -56,25 +56,26 @@ offset_left = 480.0
 offset_top = 670.0
 offset_right = -439.0
 offset_bottom = 25.879944
-theme_override_fonts/font = ExtResource("4_bw782")
+theme_override_fonts/font = ExtResource("4_xx74o")
 theme_override_font_sizes/font_size = 40
 text = "Press enter Continue"
 
 [node name="Content" type="Label" parent="." unique_id=156588270]
 layout_mode = 0
-offset_left = 274.0
-offset_top = 140.0
-offset_right = 1090.0
-offset_bottom = 776.0
+offset_left = 268.0
+offset_top = 115.0
+offset_right = 892.0
+offset_bottom = 622.0
 theme_override_colors/font_color = Color(0, 0.003921569, 0.15294118, 1)
-theme_override_fonts/font = ExtResource("4_bw782")
-theme_override_font_sizes/font_size = 50
-text = "Astra: Huh...the road ahead is so dark....
-Mysterious Voice 1: Son.....are you too consumed by 
-                         *voice cracks*
-Mysterious Voice 2: Keep moving son...for you shall 
-                          find light in the darkness....
-*Astra must destroy the 7 skulls in this level
- to move forward.
-
-"
+theme_override_fonts/font = ExtResource("4_xx74o")
+theme_override_font_sizes/font_size = 35
+text = "Astra: Uh...Where am I?...
+Mysterious voice 2: Welcome to the Darkkk, let
+ me introduce you to the tastes of life...!!!!!!!
+Mysterious Voice 2: Come son....Comeee....
+Mysterious Voice 2: Come son....give me the lantern
+ let me guide you
+Astra: NO...I will write my story...face my own fate...
+on my own...
+Mysterious Voice 2: Let me lead you to your fate...
+for this is the path you chose...."

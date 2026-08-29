@@ -62,16 +62,15 @@ text = "Press enter Continue"
 
 [node name="Content" type="Label" parent="." unique_id=156588270]
 layout_mode = 0
-offset_left = 262.0
-offset_top = 167.0
-offset_right = 1078.0
-offset_bottom = 590.0
+offset_left = 228.0
+offset_top = 183.0
+offset_right = 1065.0
+offset_bottom = 610.0
 theme_override_colors/font_color = Color(0, 0.003921569, 0.15294118, 1)
 theme_override_fonts/font = ExtResource("4_aqpnk")
-theme_override_font_sizes/font_size = 50
-text = "A world destroyed by the greed ,
-the selfishness and the power hungry 
-nature of men. A world where the greed for power 
-destroys civilizations. Thousands of people loose
-their life....Yet a faint hope remains...
-"
+theme_override_font_sizes/font_size = 60
+text = "A world destroyed by greed, selfishness
+, and the power-hungry nature of men.
+ A world where the lust for power destroys 
+civilizations. Thousands of lives are lost... 
+yet a faint hope remains."
