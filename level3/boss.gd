@@ -176,7 +176,7 @@ func take_damage(amount: int) -> void:
 	health = max(health, 0)
 
 	print("Boss health remaining: ", health)
-#abc
+#die of boss
 	if health <= 0:
 		die()
 		await get_tree().create_timer(1.5).timeout
