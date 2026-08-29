@@ -244,6 +244,8 @@ height = 996.4999
 [node name="Boss" type="CharacterBody2D" unique_id=1394216470]
 scale = Vector2(0.8, 0.8)
 script = ExtResource("1_13v7o")
+health = 60
+attack_cooldown = 0.5
 projectile_scene = ExtResource("2_loyol")
 metadata/_edit_group_ = true
 
