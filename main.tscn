@@ -374,12 +374,12 @@ position = Vector2(1741, 611.75)
 shape = SubResource("RectangleShape2D_8mmti")
 
 [node name="player" parent="." unique_id=2029710320 instance=ExtResource("2_0xm2m")]
-position = Vector2(83.00001, 491)
+position = Vector2(123, 491)
 scale = Vector2(0.2, 0.2)
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=1502977696]
-position = Vector2(924.9999, -604.9999)
-scale = Vector2(0.99999994, 0.99999994)
+position = Vector2(268, 370.00003)
+scale = Vector2(0.19999999, 0.19999999)
 zoom = Vector2(1.5, 1.5)
 limit_smoothed = true
 position_smoothing_enabled = true
@@ -387,8 +387,8 @@ position_smoothing_speed = 10.0
 rotation_smoothing_enabled = true
 
 [node name="lantern" parent="player" unique_id=4368798 instance=ExtResource("3_h2yge")]
-position = Vector2(-64.999985, 169.99998)
-scale = Vector2(0.6, 0.6)
+position = Vector2(-64.999985, 154.99991)
+scale = Vector2(0.5, 0.482)
 
 [node name="HPbar" parent="." unique_id=189037822 instance=ExtResource("6_7mycd")]
 

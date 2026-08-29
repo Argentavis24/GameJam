@@ -1,21 +1,94 @@
 [gd_scene format=3 uid="uid://squ63tptayr3"]
 
 [ext_resource type="Script" uid="uid://bue6macjw45gy" path="res://projectile.gd" id="1_qxf0c"]
-[ext_resource type="Texture2D" uid="uid://h0kdptcb35ws" path="res://Icons_Fire Arrow.png" id="2_dgwo2"]
+[ext_resource type="Texture2D" uid="uid://dvqmglmsmpfhs" path="res://Monster/Dark VFX 1 (40x32)12.png" id="2_gq7sw"]
+[ext_resource type="Texture2D" uid="uid://bcm1kkbrrqvai" path="res://Monster/Dark VFX 1 (40x32)13.png" id="3_3ovpx"]
+[ext_resource type="Texture2D" uid="uid://cjx4cvb0s1a62" path="res://Monster/Dark VFX 1 (40x32)14.png" id="4_pknk5"]
+[ext_resource type="Texture2D" uid="uid://cqkhaam2hathe" path="res://Monster/Dark VFX 1 (40x32)15.png" id="5_s62jh"]
+[ext_resource type="Texture2D" uid="uid://b2rhtjiec4eyx" path="res://Monster/Dark VFX 1 (40x32)16.png" id="6_owtjq"]
+[ext_resource type="Texture2D" uid="uid://ervqmaxradth" path="res://Monster/Dark VFX 1 (40x32)1.png" id="7_q4q4t"]
+[ext_resource type="Texture2D" uid="uid://bbv8cptfk44ea" path="res://Monster/Dark VFX 1 (40x32)2.png" id="8_tykw2"]
+[ext_resource type="Texture2D" uid="uid://c60a0yk4krvb2" path="res://Monster/Dark VFX 1 (40x32)3.png" id="9_ajp6f"]
+[ext_resource type="Texture2D" uid="uid://c75v7u01d0lyb" path="res://Monster/Dark VFX 1 (40x32)4.png" id="10_0d4cy"]
+[ext_resource type="Texture2D" uid="uid://dxkehmohd62wy" path="res://Monster/Dark VFX 1 (40x32)5.png" id="11_x8r3r"]
+[ext_resource type="Texture2D" uid="uid://bumbeta5fp81n" path="res://Monster/Dark VFX 1 (40x32)6.png" id="12_d5igw"]
+[ext_resource type="Texture2D" uid="uid://cabvowkvxelxk" path="res://Monster/Dark VFX 1 (40x32)7.png" id="13_kkou0"]
+[ext_resource type="Texture2D" uid="uid://s1umw7yg3h5t" path="res://Monster/Dark VFX 1 (40x32)8.png" id="14_hu834"]
+[ext_resource type="Texture2D" uid="uid://duona07lppoci" path="res://Monster/Dark VFX 1 (40x32)9.png" id="15_cad87"]
+[ext_resource type="Texture2D" uid="uid://bf6gtwaildh6" path="res://Monster/Dark VFX 1 (40x32)10.png" id="16_ed674"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a7ull"]
-radius = 156.0
-height = 508.0
+[sub_resource type="SpriteFrames" id="SpriteFrames_lo0rj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gq7sw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3ovpx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pknk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_s62jh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_owtjq")
+}],
+"loop": 1,
+"name": &"boss_attack_hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_q4q4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_tykw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ajp6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0d4cy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_x8r3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_d5igw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_kkou0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_hu834")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_cad87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ed674")
+}],
+"loop": 1,
+"name": &"boss_range_attack",
+"speed": 15.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lo0rj"]
+size = Vector2(175, 90)
 
 [node name="Projectile" type="Area2D" unique_id=952419646]
 script = ExtResource("1_qxf0c")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=842199420]
-scale = Vector2(0.5, 0.5)
-shape = SubResource("CapsuleShape2D_a7ull")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2031360912]
+position = Vector2(3.637979e-12, 1.8189894e-12)
+scale = Vector2(4, 4.518)
+sprite_frames = SubResource("SpriteFrames_lo0rj")
+animation = &"boss_attack_hit"
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1067200372]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_dgwo2")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=348601123]
+position = Vector2(-3.5, -13)
+shape = SubResource("RectangleShape2D_lo0rj")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
