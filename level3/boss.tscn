@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://baeu1hiu1o2df" path="res://level3/boss.gd" id="1_13v7o"]
 [ext_resource type="Texture2D" uid="uid://dckagxs2hp26l" path="res://Necromancer.png" id="1_onu46"]
+[ext_resource type="PackedScene" uid="uid://squ63tptayr3" path="res://projectile.tscn" id="2_loyol"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_loyol"]
 atlas = ExtResource("1_onu46")
@@ -238,10 +239,13 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ovpx"]
 radius = 287.0
-height = 1514.0
+height = 996.4999
 
 [node name="Boss" type="CharacterBody2D" unique_id=1394216470]
+scale = Vector2(0.8, 0.8)
 script = ExtResource("1_13v7o")
+projectile_scene = ExtResource("2_loyol")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1603779245]
 position = Vector2(0, -815)
@@ -251,4 +255,5 @@ animation = &"boss_move"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1329695444]
+position = Vector2(0, -352)
 shape = SubResource("CapsuleShape2D_3ovpx")

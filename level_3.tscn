@@ -33,5 +33,8 @@ position = Vector2(595.5, 646)
 shape = SubResource("RectangleShape2D_gq7sw")
 
 [node name="Boss" parent="." unique_id=1394216470 instance=ExtResource("3_16pka")]
-position = Vector2(1067, 364)
-scale = Vector2(0.3, 0.3)
+position = Vector2(1062, 495)
+scale = Vector2(0.2, 0.2)
+speed = 120.0
+detection_range = 800.0
+attack_cooldown = 0.4
