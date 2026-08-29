@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://wwbnwniean7a" path="res://level3/boss.tscn" id="3_16pka"]
 [ext_resource type="PackedScene" uid="uid://opb7g3t36ue2" path="res://player.tscn" id="4_1jdk1"]
+[ext_resource type="PackedScene" uid="uid://b1hdmnrmjl6xr" path="res://hpbar.tscn" id="4_j8bo8"]
 [ext_resource type="PackedScene" uid="uid://cnqq8a6i235ri" path="res://Scenes/lantern.tscn" id="5_1jdk1"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1fhj5"]
@@ -47,8 +48,10 @@ rotation = 1.5707964
 shape = SubResource("RectangleShape2D_gq7sw")
 
 [node name="Boss" parent="." unique_id=1394216470 instance=ExtResource("3_16pka")]
-position = Vector2(1062, 495)
+position = Vector2(1023, 495)
 scale = Vector2(0.2, 0.2)
 speed = 120.0
 detection_range = 800.0
 attack_cooldown = 0.4
+
+[node name="HPbar" parent="." unique_id=189037822 instance=ExtResource("4_j8bo8")]
