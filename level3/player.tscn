@@ -20,9 +20,9 @@ texture = ExtResource("2_xj4aa")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=46887548]
 shape = SubResource("CapsuleShape2D_8mmti")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=2063919219]
+[node name="AttackHitbox" type="Area2D" parent="." unique_id=2063919219]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1180960685]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackHitbox" unique_id=1180960685]
 position = Vector2(12, 0.5)
 shape = SubResource("RectangleShape2D_6xxrv")
 
