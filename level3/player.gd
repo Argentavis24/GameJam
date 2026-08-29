@@ -25,7 +25,7 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 
 	# Left and right movement
-	var direction = Input.get_axis("move_left", "move_right")
+	var direction = Input.get_axis("left", "right")
 	velocity.x = direction * speed
 
 	# Jump
