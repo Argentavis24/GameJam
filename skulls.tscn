@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cu107yjjokioi" path="res://skulls/Skulls(SpriteShee)(Dark outline1.png" id="1_lci3t"]
 [ext_resource type="Texture2D" uid="uid://bijgf67lsrxdj" path="res://skulls/Smoke VFX 2.png" id="2_e5y4l"]
 [ext_resource type="Texture2D" uid="uid://ovltaoajc7x8" path="res://skulls/dark out line skull3.1.png" id="3_u6dh0"]
+[ext_resource type="AudioStream" uid="uid://yxk6ckj2mcv4" path="res://Audio/collect.wav" id="5_u6dh0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mw2tn"]
 radius = 157.0
@@ -155,3 +156,7 @@ position = Vector2(-2.0000305, 3.9999542)
 scale = Vector2(15.125, 13.6875)
 sprite_frames = SubResource("SpriteFrames_lo0rj")
 animation = &"skull crush"
+
+[node name="collect_sfx" type="AudioStreamPlayer2D" parent="." unique_id=753390799]
+stream = ExtResource("5_u6dh0")
+volume_db = -16.0

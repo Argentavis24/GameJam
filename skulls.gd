@@ -3,6 +3,7 @@ extends Area2D
 signal crushed  # add this
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var collect_sfx: AudioStreamPlayer2D = $collect_sfx
 @onready var collision: CollisionShape2D = $CollisionShape2D
 var is_crushed: bool = false
 
@@ -25,6 +26,7 @@ func crush() -> void:
 
 	if sprite and sprite.sprite_frames and sprite.sprite_frames.has_animation("skull crush"):
 		sprite.play("skull crush")
+		collect_sfx.play()
 		await sprite.animation_finished
 	else:
 		await get_tree().create_timer(0.2).timeout
