@@ -1,33 +1,25 @@
 [gd_scene format=3 uid="uid://c60fg166q7ddj"]
 
-[ext_resource type="Texture2D" uid="uid://dlb7gsjlcqucb" path="res://Background/background 3.png" id="1_j8bo8"]
-[ext_resource type="Texture2D" uid="uid://ctp0oekp6p5j5" path="res://Background/Battleground2.png" id="1_16pka"]
-[ext_resource type="PackedScene" uid="uid://cpdnrm7leyjqt" path="res://level3/player.tscn" id="2_16pka"]
-[ext_resource type="PackedScene" uid="uid://squ63tptayr3" path="res://projectile.tscn" id="3_j8bo8"]
+[ext_resource type="PackedScene" uid="uid://wwbnwniean7a" path="res://level3/boss.tscn" id="3_16pka"]
 [ext_resource type="PackedScene" uid="uid://opb7g3t36ue2" path="res://player.tscn" id="4_1jdk1"]
-[ext_resource type="PackedScene" uid="uid://bwrfl6tpmffkh" path="res://level3/boss.tscn" id="4_j8bo8"]
 [ext_resource type="PackedScene" uid="uid://cnqq8a6i235ri" path="res://Scenes/lantern.tscn" id="5_1jdk1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8mmti"]
-size = Vector2(1259, 77.5)
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1fhj5"]
+load_path = "res://.godot/imported/Battleground2.png-84e64e4d4c80d6f99866450abe6092c2.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gq7sw"]
+size = Vector2(1245, 154)
 
 [node name="Level_3" type="Node2D" unique_id=1759323487]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1344269764]
 offset_right = 1200.0
 offset_bottom = 724.0
-texture = ExtResource("1_j8bo8")
+texture = SubResource("CompressedTexture2D_1fhj5")
 expand_mode = 1
 
-[node name="Projectile" parent="." unique_id=952419646 instance=ExtResource("3_j8bo8")]
-position = Vector2(-2, 0)
-script = null
-
-[node name="Boss" parent="." unique_id=1394216470 instance=ExtResource("4_j8bo8")]
-position = Vector2(745, 501)
-
 [node name="player" parent="." unique_id=2029710320 instance=ExtResource("4_1jdk1")]
-position = Vector2(101, 566)
+position = Vector2(122, 495)
 scale = Vector2(0.2, 0.2)
 
 [node name="lantern" parent="player" unique_id=4368798 instance=ExtResource("5_1jdk1")]
@@ -37,10 +29,9 @@ scale = Vector2(0.6, 0.577)
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1173122555]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2140241365]
-position = Vector2(597.5, 685.25)
+position = Vector2(595.5, 646)
+shape = SubResource("RectangleShape2D_gq7sw")
 
-[node name="Player2" parent="." unique_id=1084967254 instance=ExtResource("2_16pka")]
-shape = SubResource("RectangleShape2D_8mmti")
-
-[node name="Player2" parent="." unique_id=1084967254 instance=ExtResource("2_16pka")]
-position = Vector2(136, 490)
+[node name="Boss" parent="." unique_id=1394216470 instance=ExtResource("3_16pka")]
+position = Vector2(1067, 364)
+scale = Vector2(0.3, 0.3)
