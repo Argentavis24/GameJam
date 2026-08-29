@@ -58,26 +58,23 @@ text = "1. Magic attacks cost 5 Light.
     Keep your light above 20 to see 
     clearly—if it hits 0, the dark 
     consumes you (Game Over).
-2. Defeat Turtles to heal (+10 HP). 
-    Defeat Dragonflies to recover 
-    Light (+10 Light) and HP (+5 HP).
-3. Watch for screen shakes before 
-    Falling Spikes drop (-30 HP). 
-    Falling into the Dark Void resets you
-    to the start of the jump section.
-4. Text choices will appear throughout 
-     your run. +ve Hope guides
-     you to safety, while -ve Hope
-     lies to triggers game failure.
+2. Defeat monsters(25 hp) They deal 
+    10 damage per attack.
+3. In Level 2 Astra has to destroy 7 skulls
+    in order for the portal to appear
+4. Attack defeat enemis and BE THE HOPE
+    FOR YOUR WORLD.
 
 MENU CONTROLS:
 WASD/ arrow keys - pointer control
 Space/Enter - Select
 
 GAME CONTROL:
-A/ left arrow -  go left
-S/ right arrow - go right
-Space - Jump
+go left - left arrow
+go right - right arrow
+Jump - Space
+Attack - F
+Exit Game - esc
 "
 
 [node name="Heading" type="Label" parent="TextureRect" unique_id=1556850553]

@@ -76,19 +76,19 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lo0rj"]
-size = Vector2(175, 90)
+size = Vector2(95, 61.5)
 
 [node name="Projectile" type="Area2D" unique_id=952419646]
 script = ExtResource("1_qxf0c")
+speed = 600.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2031360912]
-position = Vector2(3.637979e-12, 1.8189894e-12)
 scale = Vector2(4, 4.518)
 sprite_frames = SubResource("SpriteFrames_lo0rj")
-animation = &"boss_attack_hit"
+animation = &"boss_range_attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=348601123]
-position = Vector2(-3.5, -13)
+position = Vector2(-7.5, 2.25)
 shape = SubResource("RectangleShape2D_lo0rj")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
