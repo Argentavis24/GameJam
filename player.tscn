@@ -364,9 +364,7 @@ shape = SubResource("CapsuleShape2D_doy3c")
 position = Vector2(6.0000014, -11.9999695)
 scale = Vector2(0.82, 0.76222223)
 sprite_frames = SubResource("SpriteFrames_lo0rj")
-animation = &"jump"
+animation = &"idle"
 autoplay = "idle"
-frame = 10
-frame_progress = 1.0
 
 [node name="slash" parent="." unique_id=1498497371 instance=ExtResource("72_db7k")]
