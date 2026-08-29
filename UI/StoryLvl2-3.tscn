@@ -62,10 +62,10 @@ text = "Press enter Continue"
 
 [node name="Content" type="Label" parent="." unique_id=156588270]
 layout_mode = 0
-offset_left = 248.0
-offset_top = 197.0
-offset_right = 1182.0
-offset_bottom = 549.0
+offset_left = 257.0
+offset_top = 157.0
+offset_right = 1037.0
+offset_bottom = 580.0
 theme_override_colors/font_color = Color(0, 0.003921569, 0.15294118, 1)
 theme_override_fonts/font = ExtResource("3_alrd3")
 theme_override_font_sizes/font_size = 50
@@ -73,4 +73,5 @@ text = "Astra: ....... I feel dizzy....
 
 Mysterious Voice 1: The lantern....don't lose it
                          ...you are my last hope...
-Mysterious Voice 2: Ahhh...YOU SHALL REGRET ....*DIZZY*"
+Mysterious Voice 2: Ahhh...YOU SHALL REGRET
+ ....*DIZZY*"

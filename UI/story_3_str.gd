@@ -28,4 +28,5 @@ func start_continue_float() -> void:
 
 func _process(_delta: float) -> void:
 	if can_continue and Input.is_action_just_pressed("ui_accept"):
-		get_tree().change_scene_to_file('res://UI/Story3Str.tscn')  # set your actual next scene path
+		get_tree().change_scene_to_file('res://level_3.tscn')
+		  # set your actual next scene path
