@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://h0kdptcb35ws"
-path="res://.godot/imported/Icons_Fire Arrow.png-32de716b916e2f448fdce61b283681be.ctex"
+path="res://.godot/imported/Icons_Fire Arrow.png-2cfb71517fa0e65927c5f12941330e44.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Icons_Fire Arrow.png"
-dest_files=["res://.godot/imported/Icons_Fire Arrow.png-32de716b916e2f448fdce61b283681be.ctex"]
+source_file="res://Background/Icons_Fire Arrow.png"
+dest_files=["res://.godot/imported/Icons_Fire Arrow.png-2cfb71517fa0e65927c5f12941330e44.ctex"]
 
 [params]
 

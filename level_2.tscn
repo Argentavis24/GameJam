@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://opb7g3t36ue2" path="res://player.tscn" id="6_x0ka3"]
 [ext_resource type="PackedScene" uid="uid://d2h3mefcc4pts" path="res://portal.tscn" id="7_0h7mo"]
 [ext_resource type="PackedScene" uid="uid://cnqq8a6i235ri" path="res://Scenes/lantern.tscn" id="7_eoq84"]
-[ext_resource type="Texture2D" uid="uid://dnmtymvkjprye" path="res://Background/singleheart.png" id="8_7dov7"]
+[ext_resource type="Texture2D" uid="uid://dnmtymvkjprye" path="res://singleheart.png" id="8_7dov7"]
 [ext_resource type="Script" uid="uid://bphacup55smqw" path="res://portal2.gd" id="8_ehv2h"]
 [ext_resource type="Script" uid="uid://buwk23jvwkelf" path="res://skull_manager.gd" id="10_15wb7"]
 
