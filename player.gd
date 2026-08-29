@@ -68,7 +68,11 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 	if sprite and not is_hurt:
-		if velocity.x != 0:
+		if not is_on_floor():
+			# Airborne takes priority over walk/idle
+			sprite.speed_scale = 1.0
+			sprite.play("jump")
+		elif velocity.x != 0:
 			# Match animation playback speed to how fast the player is actually moving
 			sprite.speed_scale = clamp(abs(velocity.x) / SPEED, 0.1, 1.0)
 			sprite.play("walk")
@@ -145,4 +149,3 @@ func die() -> void:
 		await get_tree().create_timer(1.0).timeout
 
 	get_tree().change_scene_to_file("res://UI/GameOver.tscn")
-	
