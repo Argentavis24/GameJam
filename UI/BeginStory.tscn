@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://bsj755t8x6y3l" path="res://UI/ImagesForUI/main_menu_glimmer_of_hope.png" id="2_lqhro"]
 [ext_resource type="Texture2D" uid="uid://nx4dyv6l2hrb" path="res://UI/ImagesForUI/parchement.png" id="3_c6ps3"]
 [ext_resource type="FontFile" uid="uid://c0rvo5ja7c4an" path="res://Font/Black Blood.otf" id="4_aqpnk"]
-[ext_resource type="AudioStream" uid="uid://n1rialr8chrg" path="res://UI/astra_sfx.mp3" id="5_lqhro"]
 
 [node name="Story" type="Control" unique_id=958154108]
 layout_mode = 3
@@ -14,11 +13,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4qh30")
-
-[node name="astra_sfx" type="AudioStreamPlayer2D" parent="." unique_id=382835326]
-stream = ExtResource("5_lqhro")
-volume_db = -16.0
-max_distance = 4096.0
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=2002980436]
 layout_mode = 1
