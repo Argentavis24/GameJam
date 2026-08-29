@@ -245,7 +245,7 @@ height = 996.4999
 scale = Vector2(0.8, 0.8)
 script = ExtResource("1_13v7o")
 health = 60
-attack_cooldown = 0.5
+attack_cooldown = 0.8
 projectile_scene = ExtResource("2_loyol")
 metadata/_edit_group_ = true
 

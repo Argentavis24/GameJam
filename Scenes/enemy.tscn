@@ -294,6 +294,7 @@ size = Vector2(11, 25)
 
 [node name="Monster" type="CharacterBody2D" unique_id=149892754]
 script = ExtResource("1_3yqyl")
+health = 45
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=247923944]
 shape = SubResource("CapsuleShape2D_4qjud")
