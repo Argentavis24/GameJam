@@ -2,7 +2,8 @@ extends CanvasLayer
 
 @export var heart_scene : PackedScene
 
-var max_hearts: int = 5
+var max_hearts: int = 10
+
 
 func _ready() -> void:
 	add_to_group("hpbar")

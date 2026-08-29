@@ -47,16 +47,27 @@
 [ext_resource type="Texture2D" uid="uid://g306x6qj6c6p" path="res://player assets/Idle/0_Dark_Oracle_Idle_016.png" id="44_8u4el"]
 [ext_resource type="Texture2D" uid="uid://70tye0sju7a1" path="res://player assets/Idle/0_Dark_Oracle_Idle_017.png" id="45_a5i73"]
 [ext_resource type="Texture2D" uid="uid://vhneee0wl6mc" path="res://player assets/Walking/0_Dark_Oracle_Walking_000.png" id="46_j7swm"]
+[ext_resource type="Texture2D" uid="uid://ccwf000xgc3h5" path="res://player assets/Jump Loop/0_Dark_Oracle_Jump Loop_000.png" id="47_04cqw"]
 [ext_resource type="Texture2D" uid="uid://cx5lrvshv6j2q" path="res://player assets/Walking/0_Dark_Oracle_Walking_001.png" id="47_bobas"]
+[ext_resource type="Texture2D" uid="uid://c2c1pr68t02id" path="res://player assets/Jump Loop/0_Dark_Oracle_Jump Loop_001.png" id="48_vihdy"]
 [ext_resource type="Texture2D" uid="uid://dw40qlt0oen48" path="res://player assets/Walking/0_Dark_Oracle_Walking_002.png" id="48_vmuuc"]
+[ext_resource type="Texture2D" uid="uid://w46rmocpo2s" path="res://player assets/Jump Loop/0_Dark_Oracle_Jump Loop_002.png" id="49_7c55y"]
 [ext_resource type="Texture2D" uid="uid://oi1gab02vq6a" path="res://player assets/Walking/0_Dark_Oracle_Walking_003.png" id="49_j6q74"]
+[ext_resource type="Texture2D" uid="uid://b2ysd4q587pod" path="res://player assets/Jump Loop/0_Dark_Oracle_Jump Loop_003.png" id="50_hoal8"]
 [ext_resource type="Texture2D" uid="uid://6so1y0v4sd0" path="res://player assets/Walking/0_Dark_Oracle_Walking_005.png" id="51_6jk4c"]
+[ext_resource type="Texture2D" uid="uid://bu881byadwncd" path="res://player assets/Jump Loop/0_Dark_Oracle_Jump Loop_004.png" id="51_htija"]
 [ext_resource type="Texture2D" uid="uid://dodkpwdgbr1bc" path="res://player assets/Walking/0_Dark_Oracle_Walking_006.png" id="52_8hr8l"]
+[ext_resource type="Texture2D" uid="uid://ckrikbri0jufr" path="res://player assets/Falling Down/0_Dark_Oracle_Falling Down_000.png" id="52_he65s"]
+[ext_resource type="Texture2D" uid="uid://q3u2t35fdbmy" path="res://player assets/Falling Down/0_Dark_Oracle_Falling Down_001.png" id="53_c0yt3"]
 [ext_resource type="Texture2D" uid="uid://bgkye6w2dnxnf" path="res://player assets/Walking/0_Dark_Oracle_Walking_007.png" id="53_c2etn"]
 [ext_resource type="Texture2D" uid="uid://dm85ja54q67nv" path="res://player assets/Walking/0_Dark_Oracle_Walking_008.png" id="54_cgqxi"]
+[ext_resource type="Texture2D" uid="uid://bukwlq8whv272" path="res://player assets/Falling Down/0_Dark_Oracle_Falling Down_002.png" id="54_uckl6"]
+[ext_resource type="Texture2D" uid="uid://cnsbhxpede3gs" path="res://player assets/Falling Down/0_Dark_Oracle_Falling Down_003.png" id="55_5ihbc"]
 [ext_resource type="Texture2D" uid="uid://bxne363uyqc7u" path="res://player assets/Walking/0_Dark_Oracle_Walking_009.png" id="55_api4a"]
 [ext_resource type="Texture2D" uid="uid://b6n61pjauagmp" path="res://player assets/Walking/0_Dark_Oracle_Walking_010.png" id="56_o67lt"]
+[ext_resource type="Texture2D" uid="uid://dj5x3qfguj06s" path="res://player assets/Falling Down/0_Dark_Oracle_Falling Down_004.png" id="56_sc53x"]
 [ext_resource type="Texture2D" uid="uid://calswcb84uq0h" path="res://player assets/Walking/0_Dark_Oracle_Walking_011.png" id="57_8xvhe"]
+[ext_resource type="Texture2D" uid="uid://ck7pd8rjollfl" path="res://player assets/Falling Down/0_Dark_Oracle_Falling Down_005.png" id="57_ro7of"]
 [ext_resource type="Texture2D" uid="uid://c4ki3keypiqha" path="res://player assets/Walking/0_Dark_Oracle_Walking_012.png" id="58_yelk6"]
 [ext_resource type="Texture2D" uid="uid://chn0m1kgkgrv8" path="res://player assets/Walking/0_Dark_Oracle_Walking_013.png" id="59_v3rbc"]
 [ext_resource type="Texture2D" uid="uid://wb3c2drrsjjb" path="res://player assets/Walking/0_Dark_Oracle_Walking_014.png" id="60_0wr1b"]
@@ -166,7 +177,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"hurt",
-"speed": 15.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -226,6 +237,44 @@ animations = [{
 "loop": 0,
 "name": &"idle",
 "speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("47_04cqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_vihdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_7c55y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_hoal8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_htija")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_he65s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_c0yt3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_uckl6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_5ihbc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_sc53x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_ro7of")
+}],
+"loop": 0,
+"name": &"jump",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -315,7 +364,9 @@ shape = SubResource("CapsuleShape2D_doy3c")
 position = Vector2(6.0000014, -11.9999695)
 scale = Vector2(0.82, 0.76222223)
 sprite_frames = SubResource("SpriteFrames_lo0rj")
-animation = &"hurt"
+animation = &"jump"
 autoplay = "idle"
+frame = 10
+frame_progress = 1.0
 
 [node name="slash" parent="." unique_id=1498497371 instance=ExtResource("72_db7k")]

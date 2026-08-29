@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b1hdmnrmjl6xr"]
+
+[ext_resource type="PackedScene" uid="uid://c1yenu1jj41mo" path="res://Scenes/hpbar.tscn" id="1_dkruw"]
+
+[node name="HPbar" unique_id=189037822 instance=ExtResource("1_dkruw")]
+scale = Vector2(2, 2)
+transform = Transform2D(2, 0, 0, 2, 0, 0)
